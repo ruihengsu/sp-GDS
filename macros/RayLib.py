@@ -194,7 +194,7 @@ class Meander(pya.PCellDeclarationHelper):
             pya.DPath(bond_line_left_pts, self.w))
 
 
-class Test1(pya.PCellDeclarationHelper):
+class EtchTest_Box(pya.PCellDeclarationHelper):
     """
     The PCell declaration for the Meander
     """
@@ -202,7 +202,7 @@ class Test1(pya.PCellDeclarationHelper):
     def __init__(self):
 
         # Important: initialize the super class
-        super(Test1, self).__init__()
+        super(EtchTest_Box, self).__init__()
 
         # declare the parameters
         self.param("l", self.TypeLayer, "Layer", default=pya.LayerInfo(1, 0))
@@ -217,7 +217,7 @@ class Test1(pya.PCellDeclarationHelper):
 
     def display_text_impl(self):
         # Provide a descriptive text for the cell
-        return "Test1(Layer=%s,Starting Length=%.12g, Starting Width=%.12g, Dw=%.12g, Dl=%.12g, Minimum Length=%.12g, Minimum Width=%.12g, Spacing=%.12g)" % (str(self.l), self.SL, self.SW, self.dW, self.dL, self.MinL, self.MinW, self.spacing)
+        return "EtchTest_Box(Layer=%s,Starting Length=%.12g, Starting Width=%.12g, Dw=%.12g, Dl=%.12g, Minimum Length=%.12g, Minimum Width=%.12g, Spacing=%.12g)" % (str(self.l), self.SL, self.SW, self.dW, self.dL, self.MinL, self.MinW, self.spacing)
 
     def produce_impl(self):
         # This is the main part of the implementation: create the layout
@@ -244,7 +244,89 @@ class Test1(pya.PCellDeclarationHelper):
             starting_width -= self.dW
             starting_length -= self.dL
 
+class EtchTest_Circ(pya.PCellDeclarationHelper):
+    """
+    The PCell declaration for the Meander
+    """
 
+    def __init__(self):
+
+        # Important: initialize the super class
+        super(EtchTest_Circ, self).__init__()
+
+        # declare the parameters
+        self.param("l", self.TypeLayer, "Layer", default=pya.LayerInfo(1, 0))
+        self.param("SR", self.TypeDouble, "Starting Radius", default=1000.)
+        self.param("dR", self.TypeDouble, "Dr", default=50.)
+        self.param("MinR", self.TypeDouble, "Minimum radius", default=5.)
+        self.param("spacing", self.TypeDouble,
+                   "Spacing between structures", default=100.)
+        self.param("res", self.TypeInt,
+                   "Resolution", default=100.)
+
+    def display_text_impl(self):
+        # Provide a descriptive text for the cell
+        return "EtchTest_Circ(Layer=%s)" % (str(self.l))
+
+    def produce_impl(self):
+        # This is the main part of the implementation: create the layout
+
+        radians = np.linspace(0, 2*np.pi, self.res, endpoint = False)
+
+        starting_radius = self.SR
+        offset = 0
+        while starting_radius > self.MinR:
+            pts = []
+            for theta in radians:
+                x = starting_radius*np.cos(theta) + offset
+                y = starting_radius*np.sin(theta)
+                pts.append(pya.DPoint(x, y))
+            self.cell.shapes(self.l_layer).insert(pya.DPolygon(pts))
+            
+            offset += self.spacing
+            starting_radius -= self.dR
+
+
+class EtchTest_Circ2(pya.PCellDeclarationHelper):
+    """
+    The PCell declaration for the Meander
+    """
+
+    def __init__(self):
+
+        # Important: initialize the super class
+        super(EtchTest_Circ2, self).__init__()
+
+        # declare the parameters
+        self.param("l", self.TypeLayer, "Layer", default=pya.LayerInfo(1, 0))
+        self.param("RL", self.TypeList , "Radius list", default=[50,40,30,20,10])
+        self.param("SL", self.TypeList,
+                   "Spacing List", default=[100,100,100,30,30])
+        self.param("res", self.TypeInt,
+                   "Resolution", default=100.)
+
+    def display_text_impl(self):
+        # Provide a descriptive text for the cell
+        return "EtchTest_Circ2(Layer=%s)" % (str(self.l))
+
+    def produce_impl(self):
+        # This is the main part of the implementation: create the layout
+        assert len(self.RL) == len(self.SL)
+        radians = np.linspace(0, 2*np.pi, self.res, endpoint = False)
+        
+        offset = 0
+        for i, R in enumerate(self.RL):
+            offset +=  float(self.SL[i])
+            print(R)
+            pts = []
+            for theta in radians:
+                x = float(R)*np.cos(theta) + offset
+                y = float(R)*np.sin(theta)
+                pts.append(pya.DPoint(x, y))
+            
+            self.cell.shapes(self.l_layer).insert(pya.DPolygon(pts))
+            
+            
 class ExperimentalOhmics (pya.PCellDeclarationHelper):
     """
     The PCell declaration for the Meander
@@ -385,7 +467,9 @@ class RayLib(pya.Library):
         # Create the PCell declarations
         self.layout().register_pcell("Serpentine", Serpentine())
         self.layout().register_pcell("Meander", Meander())
-        self.layout().register_pcell("Test1", Test1())
+        self.layout().register_pcell("EtchTest_Box", EtchTest_Box())
+        self.layout().register_pcell("EtchTest_Circ", EtchTest_Circ())
+        self.layout().register_pcell("EtchTest_Circ2", EtchTest_Circ2())
         self.layout().register_pcell("ExperimentalOhmics", ExperimentalOhmics())
         self.layout().register_pcell("RCLine", RCLine())
         # Register us with the name "SerpentineLib".
