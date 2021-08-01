@@ -307,7 +307,7 @@ class EtchTest_Box3(pya.PCellDeclarationHelper):
                    "Actual width is equal to what is specified, times this scaling parameter", default=1/1000.)
         self.param("labelscaling", self.TypeDouble,
                    "Changes units of labels", default=1000)
-        print((np.linspace(1000, 1, 11, dtype=int)).tolist())
+        # print((np.linspace(1000, 1, 11, dtype=int)).tolist())
     def display_text_impl(self):
         # Provide a descriptive text for the cell
         return "EtchTest_Box3(Layer=%s)" % (str(self.l))
@@ -595,6 +595,135 @@ class RCLine(pya.PCellDeclarationHelper):
         pts.append(pya.DPoint(x, y))
         
         self.cell.shapes(self.l_layer).insert(pya.DBox(pts[0], pts[1]))
+
+
+class Align(pya.PCellDeclarationHelper):
+    """
+    The PCell declaration for the Serpentine
+    """
+
+    def __init__(self):
+
+        # Important: initialize the super class
+        super(Align, self).__init__()
+
+        # declare the parameters
+        self.param("l", self.TypeLayer, "Layer", default=pya.LayerInfo(1, 0))
+        
+        self.param("width", self.TypeDouble, "Rectangle width", default=300.0)
+        self.param("length", self.TypeDouble, "Rectangle length", default=300.0)
+        
+        self.param("cwidth", self.TypeDouble, "Cross width", default=200.0)
+        self.param("clength", self.TypeDouble, "Cross length", default=200.0)
+        self.param("cthick", self.TypeDouble, "Cross thickness", default=10.0)
+      
+    def display_text_impl(self):
+        # Provide a descriptive text for the cell
+        return "Align(L=%s)" % (str(self.l))
+
+    def produce_impl(self):
+        
+        lower_left = pya.DPoint(-self.width/2, -self.length/2)
+        upper_right = pya.DPoint(self.width/2, self.length/2)
+        square = pya.DBox(lower_left, upper_right)
+        
+        l0 = pya.Region()
+        l0.insert(square)
+        
+        c1 = pya.DPoint(-self.cwidth/2, 0)
+        c2 = pya.DPoint(self.cwidth/2, 0)
+        p1 = pya.DPath([c1, c2], self.cthick)
+        
+        l1 = pya.Region()
+        l1.insert(p1)
+        
+        c3 = pya.DPoint(0, -self.clength/2)
+        c4 = pya.DPoint(0, self.clength/2)
+        p2 = pya.DPath([c3, c4], self.cthick)
+        
+        l2 = pya.Region()
+        l2.insert(p2)
+        
+        result =l0 - l1 - l2
+        self.cell.shapes(self.l_layer).insert(result)
+
+class AlignArray(pya.PCellDeclarationHelper):
+    """
+    The PCell declaration for the Serpentine
+    """
+
+    def __init__(self):
+
+        # Important: initialize the super class
+        super(AlignArray, self).__init__()
+
+        # declare the parameters
+        self.param("l", self.TypeLayer, "Layer", default=pya.LayerInfo(1, 0))
+        
+        self.param("width", self.TypeDouble, "Rectangle width", default=300.0)
+        self.param("length", self.TypeDouble, "Rectangle length", default=300.0)
+        
+        self.param("cwidth", self.TypeDouble, "Cross width", default=200.0)
+        self.param("clength", self.TypeDouble, "Cross length", default=200.0)
+        self.param("cthick", self.TypeDouble, "Cross thickness", default=10.0)
+        
+        self.param("rows", self.TypeInt, "Number of rows", default=2)
+        self.param("columns", self.TypeInt, "Number of columns", default=3)
+        
+        self.param("row_step_x", self.TypeDouble, "Row step x", default=300.0)
+        self.param("row_step_y", self.TypeDouble, "Row step y", default=300.0)
+        self.param("col_step_x", self.TypeDouble, "Col step x", default=300.0)
+        self.param("col_step_y", self.TypeDouble, "Col step y", default=300.0)
+
+        self.param("text_distance", self.TypeDouble, "Text distance", default=60.0)
+        self.param("text_scale", self.TypeDouble, "Text scaling factor", default=0.02)
+    
+    def display_text_impl(self):
+        # Provide a descriptive text for the cell
+        return "AlignArray(L=%s)" % (str(self.l))
+
+    def produce_impl(self):
+        
+        x = np.linspace(0, self.rows, endpoint=False, num=self.rows)
+        y = np.linspace(0, self.columns, endpoint=False, num=self.columns) 
+        
+        XX,YY = np.meshgrid(x,y, indexing='ij')
+        
+        print(XX)
+        print(YY)
+        
+        grid=np.zeros((self.rows,self.columns),dtype='i,i')
+        
+        for i in range(0, self.rows):
+          for j in range(0, self.columns):
+            grid[i,j] = (XX[i,j], YY[i,j])
+            print(grid[i,j])
+        
+        print(grid)
+        
+        lower_left = pya.DPoint(-self.width/2, -self.length/2)
+        upper_right = pya.DPoint(self.width/2, self.length/2)
+        square = pya.DBox(lower_left, upper_right)
+        
+        l0 = pya.Region()
+        l0.insert(square)
+        
+        c1 = pya.DPoint(-self.cwidth/2, 0)
+        c2 = pya.DPoint(self.cwidth/2, 0)
+        p1 = pya.DPath([c1, c2], self.cthick)
+        
+        l1 = pya.Region()
+        l1.insert(p1)
+        
+        c3 = pya.DPoint(0, -self.clength/2)
+        c4 = pya.DPoint(0, self.clength/2)
+        p2 = pya.DPath([c3, c4], self.cthick)
+        
+        l2 = pya.Region()
+        l2.insert(p2)
+        
+        result =l0 - l1 - l2
+        self.cell.shapes(self.l_layer).insert(result)
         
 class RayLib(pya.Library):
     """
@@ -618,6 +747,9 @@ class RayLib(pya.Library):
         
         self.layout().register_pcell("ExperimentalOhmics", ExperimentalOhmics())
         self.layout().register_pcell("RCLine", RCLine())
+        self.layout().register_pcell("Align", Align())
+        self.layout().register_pcell("AlignArray", AlignArray())
+        
         # Register us with the name "SerpentineLib".
         self.register("RayLib")
 
