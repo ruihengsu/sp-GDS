@@ -622,7 +622,6 @@ class Align(pya.PCellDeclarationHelper):
         return "Align(L=%s)" % (str(self.l))
 
     def produce_impl(self):
-        
         lower_left = pya.DPoint(-self.width/2, -self.length/2)
         upper_right = pya.DPoint(self.width/2, self.length/2)
         square = pya.DBox(lower_left, upper_right)
@@ -668,15 +667,13 @@ class AlignArray(pya.PCellDeclarationHelper):
         self.param("cthick", self.TypeDouble, "Cross thickness", default=10.0)
         
         self.param("rows", self.TypeInt, "Number of rows", default=2)
-        self.param("columns", self.TypeInt, "Number of columns", default=3)
+        self.param("columns", self.TypeInt, "Number of columns", default=2)
         
-        self.param("row_step_x", self.TypeDouble, "Row step x", default=300.0)
-        self.param("row_step_y", self.TypeDouble, "Row step y", default=300.0)
-        self.param("col_step_x", self.TypeDouble, "Col step x", default=300.0)
-        self.param("col_step_y", self.TypeDouble, "Col step y", default=300.0)
-
-        self.param("text_distance", self.TypeDouble, "Text distance", default=60.0)
-        self.param("text_scale", self.TypeDouble, "Text scaling factor", default=0.02)
+        self.param("row_step", self.TypeDouble, "Row step", default=300.0)
+        self.param("col_step", self.TypeDouble, "Col step", default=300.0)
+        
+        self.param("text_distance", self.TypeDouble, "Text distance", default=75.0)
+        self.param("text_scale", self.TypeDouble, "Text scaling factor", default=0.04)
     
     def display_text_impl(self):
         # Provide a descriptive text for the cell
@@ -684,8 +681,10 @@ class AlignArray(pya.PCellDeclarationHelper):
 
     def produce_impl(self):
         
-        x = np.linspace(0, self.rows, endpoint=False, num=self.rows)
-        y = np.linspace(0, self.columns, endpoint=False, num=self.columns) 
+        scaling_factor = int(1/self.layout.dbu)
+        print(scaling_factor)
+        x = np.linspace(0, self.rows, endpoint=False, num=self.rows, dtype=int)*self.row_step
+        y = np.linspace(0, self.columns, endpoint=False, num=self.columns,)*self.col_step
         
         XX,YY = np.meshgrid(x,y, indexing='ij')
         
@@ -699,31 +698,37 @@ class AlignArray(pya.PCellDeclarationHelper):
             grid[i,j] = (XX[i,j], YY[i,j])
             print(grid[i,j])
         
-        print(grid)
+        for p in grid.flatten():
+          c_x = float(p[0])
+          c_y = float(p[1])
         
-        lower_left = pya.DPoint(-self.width/2, -self.length/2)
-        upper_right = pya.DPoint(self.width/2, self.length/2)
-        square = pya.DBox(lower_left, upper_right)
+          lower_left = pya.DPoint(c_x-self.width/2, c_y-self.length/2)
+          upper_right = pya.DPoint(c_x+self.width/2, c_y+self.length/2)
+          square = pya.DBox(lower_left*scaling_factor, upper_right*scaling_factor)
         
-        l0 = pya.Region()
-        l0.insert(square)
+          l0 = pya.Region()
+          l0.insert(square)
+
+          c1 = pya.DPoint(c_x-self.cwidth/2.0, c_y)*scaling_factor
+          c2 = pya.DPoint(c_x+self.cwidth/2, c_y)*scaling_factor
+          p1 = pya.DPath([c1, c2], self.cthick*scaling_factor)
         
-        c1 = pya.DPoint(-self.cwidth/2, 0)
-        c2 = pya.DPoint(self.cwidth/2, 0)
-        p1 = pya.DPath([c1, c2], self.cthick)
+          l1 = pya.Region()
+          l1.insert(p1)
         
-        l1 = pya.Region()
-        l1.insert(p1)
-        
-        c3 = pya.DPoint(0, -self.clength/2)
-        c4 = pya.DPoint(0, self.clength/2)
-        p2 = pya.DPath([c3, c4], self.cthick)
-        
-        l2 = pya.Region()
-        l2.insert(p2)
-        
-        result =l0 - l1 - l2
-        self.cell.shapes(self.l_layer).insert(result)
+          c3 = pya.DPoint(c_x, c_y-self.clength/2)*scaling_factor
+          c4 = pya.DPoint(c_x, c_y+self.clength/2)*scaling_factor
+          p2 = pya.DPath([c3, c4], self.cthick*scaling_factor)
+          
+          l2 = pya.Region()
+          l2.insert(p2)
+          
+          label = pya.TextGenerator.default_generator().text("{},{}".format(int(p[0]-x.max()/2), int(p[1]-y.max()/2)), self.text_scale*self.layout.dbu).move(1000*(c_x-self.width/2 + self.width/40), 1000*c_y - 1000*self.text_distance)
+          
+          result = l0 - l1 - l2 - label
+          
+          self.cell.shapes(self.l_layer).insert(result)         
+          #self.cell.shapes(self.l_layer).insert(label)
         
 class RayLib(pya.Library):
     """
