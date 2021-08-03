@@ -244,6 +244,7 @@ class EtchTest_Box(pya.PCellDeclarationHelper):
             starting_width -= self.dW
             starting_length -= self.dL
 
+
 class EtchTest_Box2(pya.PCellDeclarationHelper):
     """
     The PCell declaration for the Meander
@@ -256,8 +257,10 @@ class EtchTest_Box2(pya.PCellDeclarationHelper):
 
         # declare the parameters
         self.param("l", self.TypeLayer, "Layer", default=pya.LayerInfo(1, 0))
-        self.param("LL", self.TypeList, "Length List", default=[1000., 1000., 1000., 1000., 1000., 1000., 1000., 1000.])
-        self.param("WL", self.TypeList, "Width List", default=[100, 50., 30, 20, 10,  9, 8, 7, ])
+        self.param("LL", self.TypeList, "Length List", default=[
+                   1000., 1000., 1000., 1000., 1000., 1000., 1000., 1000.])
+        self.param("WL", self.TypeList, "Width List",
+                   default=[100, 50., 30, 20, 10,  9, 8, 7, ])
         self.param("spacing", self.TypeList,
                    "Spacing between structures", default=[0, 50., 50, 50, 50,  50, 50, 50, ])
 
@@ -267,23 +270,24 @@ class EtchTest_Box2(pya.PCellDeclarationHelper):
 
     def produce_impl(self):
         # This is the main part of the implementation: create the layout
-        
+
         assert (len(self.LL) == len(self.WL) == len(self.spacing))
-        
+
         x = 0.0
         y = 0.0
         for i in range(0, len(self.LL)):
-                pts = []
-            
-                x += float(self.spacing[i])
-                pts.append(pya.DPoint(x, y))
-                x += float(self.WL[i])
-                y += float(self.LL[i])
-                pts.append(pya.DPoint(x, y))
-                self.cell.shapes(self.l_layer).insert(pya.DBox(pts[0], pts[1]))
-    
-                y -=  float(self.LL[i])
-                # x += float(self.spacing[i])
+            pts = []
+
+            x += float(self.spacing[i])
+            pts.append(pya.DPoint(x, y))
+            x += float(self.WL[i])
+            y += float(self.LL[i])
+            pts.append(pya.DPoint(x, y))
+            self.cell.shapes(self.l_layer).insert(pya.DBox(pts[0], pts[1]))
+
+            y -= float(self.LL[i])
+            # x += float(self.spacing[i])
+
 
 class EtchTest_Box3(pya.PCellDeclarationHelper):
     """
@@ -298,7 +302,8 @@ class EtchTest_Box3(pya.PCellDeclarationHelper):
         # declare the parameters
         self.param("l", self.TypeLayer, "Layer", default=pya.LayerInfo(1, 0))
         self.param("L", self.TypeDouble, "Length", default=1000)
-        self.param("WL", self.TypeList, "Width List", default=(np.linspace(1000, 1, 101, dtype=int)).tolist())
+        self.param("WL", self.TypeList, "Width List", default=(
+            np.linspace(1000, 1, 101, dtype=int)).tolist())
         self.param("text_distance", self.TypeDouble,
                    "Distance between the structure and the bottom of the text", default=10.)
         self.param("spacing", self.TypeDouble,
@@ -308,36 +313,38 @@ class EtchTest_Box3(pya.PCellDeclarationHelper):
         self.param("labelscaling", self.TypeDouble,
                    "Changes units of labels", default=1000)
         # print((np.linspace(1000, 1, 11, dtype=int)).tolist())
+
     def display_text_impl(self):
         # Provide a descriptive text for the cell
         return "EtchTest_Box3(Layer=%s)" % (str(self.l))
 
     def produce_impl(self):
         # This is the main part of the implementation: create the layout
-        
+
         lib = pya.Library.library_by_name("Basic")
         if lib == None:
-          raise Exception("Unknown lib 'Basic'")
-        pcell_decl = lib.layout().pcell_declaration("TEXT");
+            raise Exception("Unknown lib 'Basic'")
+        pcell_decl = lib.layout().pcell_declaration("TEXT")
         if pcell_decl == None:
-          raise Exception("Unknown PCell 'TEXT'")
-          
+            raise Exception("Unknown PCell 'TEXT'")
+
         x = 0.0
         y = 0.0
         for i in range(0, len(self.WL)):
-                pts = []
-                pts.append(pya.DPoint(x, y))
-                x += float(self.WL[i])*self.Wscaling
-                y += float(self.L)
-                pts.append(pya.DPoint(x, y))
-                self.cell.shapes(self.l_layer).insert(pya.DBox(pts[0], pts[1]))
-                label = pya.TextGenerator.default_generator().text("{}".format(int(float(self.WL[i])*self.labelscaling)), 0.05*self.layout.dbu).move(1000*pts[0].x, 1000*pts[0].y - 1000*self.text_distance)
-                
-                self.cell.shapes(self.l_layer).insert(label)
-                
-                x += float(self.spacing)
-                y -=  float(self.L)
-                
+            pts = []
+            pts.append(pya.DPoint(x, y))
+            x += float(self.WL[i])*self.Wscaling
+            y += float(self.L)
+            pts.append(pya.DPoint(x, y))
+            self.cell.shapes(self.l_layer).insert(pya.DBox(pts[0], pts[1]))
+            label = pya.TextGenerator.default_generator().text("{}".format(int(float(
+                self.WL[i])*self.labelscaling)), 0.05*self.layout.dbu).move(1000*pts[0].x, 1000*pts[0].y - 1000*self.text_distance)
+
+            self.cell.shapes(self.l_layer).insert(label)
+
+            x += float(self.spacing)
+            y -= float(self.L)
+
 
 class EtchTest_Circ(pya.PCellDeclarationHelper):
     """
@@ -366,7 +373,7 @@ class EtchTest_Circ(pya.PCellDeclarationHelper):
     def produce_impl(self):
         # This is the main part of the implementation: create the layout
 
-        radians = np.linspace(0, 2*np.pi, self.res, endpoint = False)
+        radians = np.linspace(0, 2*np.pi, self.res, endpoint=False)
 
         starting_radius = self.SR
         offset = 0
@@ -377,7 +384,7 @@ class EtchTest_Circ(pya.PCellDeclarationHelper):
                 y = starting_radius*np.sin(theta)
                 pts.append(pya.DPoint(x, y))
             self.cell.shapes(self.l_layer).insert(pya.DPolygon(pts))
-            
+
             offset += self.spacing
             starting_radius -= self.dR
 
@@ -394,9 +401,10 @@ class EtchTest_Circ2(pya.PCellDeclarationHelper):
 
         # declare the parameters
         self.param("l", self.TypeLayer, "Layer", default=pya.LayerInfo(1, 0))
-        self.param("RL", self.TypeList , "Radius list", default=[50,40,30,20,10])
+        self.param("RL", self.TypeList, "Radius list",
+                   default=[50, 40, 30, 20, 10])
         self.param("SL", self.TypeList,
-                   "Spacing List", default=[100,100,100,30,30])
+                   "Spacing List", default=[100, 100, 100, 30, 30])
         self.param("res", self.TypeInt,
                    "Resolution", default=100.)
 
@@ -407,19 +415,20 @@ class EtchTest_Circ2(pya.PCellDeclarationHelper):
     def produce_impl(self):
         # This is the main part of the implementation: create the layout
         assert len(self.RL) == len(self.SL)
-        radians = np.linspace(0, 2*np.pi, self.res, endpoint = False)
-        
+        radians = np.linspace(0, 2*np.pi, self.res, endpoint=False)
+
         offset = 0
         for i, R in enumerate(self.RL):
-            offset +=  float(self.SL[i])
+            offset += float(self.SL[i])
             print(R)
             pts = []
             for theta in radians:
                 x = float(R)*np.cos(theta) + offset
                 y = float(R)*np.sin(theta)
                 pts.append(pya.DPoint(x, y))
-            
+
             self.cell.shapes(self.l_layer).insert(pya.DPolygon(pts))
+
 
 class EtchTest_Circ3(pya.PCellDeclarationHelper):
     """
@@ -433,7 +442,8 @@ class EtchTest_Circ3(pya.PCellDeclarationHelper):
 
         # declare the parameters
         self.param("l", self.TypeLayer, "Layer", default=pya.LayerInfo(1, 0))
-        self.param("RL", self.TypeList , "Radius list", default=(np.linspace(1000, 1, 101, dtype=int)).tolist())
+        self.param("RL", self.TypeList, "Radius list", default=(
+            np.linspace(1000, 1, 101, dtype=int)).tolist())
         self.param("S", self.TypeDouble,
                    "Spacing List", default=50)
         self.param("res", self.TypeInt,
@@ -442,15 +452,15 @@ class EtchTest_Circ3(pya.PCellDeclarationHelper):
                    "Actual width is equal to what is specified, times this scaling parameter", default=1/10.)
         self.param("labelscaling", self.TypeDouble,
                    "Changes units of labels", default=1000)
-                   
+
     def display_text_impl(self):
         # Provide a descriptive text for the cell
         return "EtchTest_Circ2(Layer=%s)" % (str(self.l))
 
     def produce_impl(self):
         # This is the main part of the implementation: create the layout
-        radians = np.linspace(0, 2*np.pi, self.res, endpoint = False)
-        
+        radians = np.linspace(0, 2*np.pi, self.res, endpoint=False)
+
         offset = 0
         for i, R in enumerate(self.RL):
             print(R)
@@ -461,7 +471,8 @@ class EtchTest_Circ3(pya.PCellDeclarationHelper):
                 pts.append(pya.DPoint(x, y))
             offset += self.S
             self.cell.shapes(self.l_layer).insert(pya.DPolygon(pts))
-            
+
+
 class ExperimentalOhmics (pya.PCellDeclarationHelper):
     """
     The PCell declaration for the Meander
@@ -528,6 +539,7 @@ class ExperimentalOhmics (pya.PCellDeclarationHelper):
 
         self.cell.shapes(self.l_layer).insert(pya.DPolygon(pts))
 
+
 class RCLine(pya.PCellDeclarationHelper):
     """
     The PCell declaration for the Serpentine
@@ -544,9 +556,11 @@ class RCLine(pya.PCellDeclarationHelper):
         self.param("line_L", self.TypeDouble, "Line length", default=500.0)
         self.param("pad_W", self.TypeDouble, "Bond pad width", default=300.0)
         self.param("pad_L", self.TypeDouble, "Bond pad length", default=300.0)
-        self.param("text_distance", self.TypeDouble, "Offset parameter between the bottom edge of the RC line, and the label", default=60.0)
-        self.param("text_scale", self.TypeDouble, "Scaling parameter for the text size", default=0.02)
-    
+        self.param("text_distance", self.TypeDouble,
+                   "Offset parameter between the bottom edge of the RC line, and the label", default=60.0)
+        self.param("text_scale", self.TypeDouble,
+                   "Scaling parameter for the text size", default=0.02)
+
     def display_text_impl(self):
         # Provide a descriptive text for the cell
         return "RCLine(L=%s)" % (str(self.l))
@@ -557,43 +571,44 @@ class RCLine(pya.PCellDeclarationHelper):
 
         # compute the Serpentine: generate a list of spine points for the path and then
         # create the path
-        
+
         squares = self.line_L/self.line_W
-        
+
         pts = []
         x = -self.pad_W/2
         y = -self.pad_L - self.line_L/2
-        
+
         pts.append(pya.DPoint(x, y))
-        
-        label = pya.TextGenerator.default_generator().text("{}".format(squares), self.text_scale*self.layout.dbu).move(1000*pts[0].x, 1000*pts[0].y - 1000*self.text_distance)
+
+        label = pya.TextGenerator.default_generator().text("{}".format(squares), self.text_scale *
+                                                           self.layout.dbu).move(1000*pts[0].x, 1000*pts[0].y - 1000*self.text_distance)
         self.cell.shapes(self.l_layer).insert(label)
-        
+
         x = self.pad_W/2
         y = -self.line_L/2
         pts.append(pya.DPoint(x, y))
-        
+
         self.cell.shapes(self.l_layer).insert(pya.DBox(pts[0], pts[1]))
-       
+
         pts = []
         x = 0
         y = -self.line_L/2
         pts.append(pya.DPoint(x, y))
-        
+
         x = 0
         y = self.line_L/2
         pts.append(pya.DPoint(x, y))
         self.cell.shapes(self.l_layer).insert(pya.DPath(pts, self.line_W))
-        
+
         pts = []
         x = -self.pad_W/2
         y = self.line_L/2
         pts.append(pya.DPoint(x, y))
-        
+
         x = self.pad_W/2
-        y = self.line_L/2 + self.pad_L 
+        y = self.line_L/2 + self.pad_L
         pts.append(pya.DPoint(x, y))
-        
+
         self.cell.shapes(self.l_layer).insert(pya.DBox(pts[0], pts[1]))
 
 
@@ -609,14 +624,15 @@ class Align(pya.PCellDeclarationHelper):
 
         # declare the parameters
         self.param("l", self.TypeLayer, "Layer", default=pya.LayerInfo(1, 0))
-        
+
         self.param("width", self.TypeDouble, "Rectangle width", default=300.0)
-        self.param("length", self.TypeDouble, "Rectangle length", default=300.0)
-        
+        self.param("length", self.TypeDouble,
+                   "Rectangle length", default=300.0)
+
         self.param("cwidth", self.TypeDouble, "Cross width", default=200.0)
         self.param("clength", self.TypeDouble, "Cross length", default=200.0)
         self.param("cthick", self.TypeDouble, "Cross thickness", default=10.0)
-      
+
     def display_text_impl(self):
         # Provide a descriptive text for the cell
         return "Align(L=%s)" % (str(self.l))
@@ -625,26 +641,27 @@ class Align(pya.PCellDeclarationHelper):
         lower_left = pya.DPoint(-self.width/2, -self.length/2)
         upper_right = pya.DPoint(self.width/2, self.length/2)
         square = pya.DBox(lower_left, upper_right)
-        
+
         l0 = pya.Region()
         l0.insert(square)
-        
+
         c1 = pya.DPoint(-self.cwidth/2, 0)
         c2 = pya.DPoint(self.cwidth/2, 0)
         p1 = pya.DPath([c1, c2], self.cthick)
-        
+
         l1 = pya.Region()
         l1.insert(p1)
-        
+
         c3 = pya.DPoint(0, -self.clength/2)
         c4 = pya.DPoint(0, self.clength/2)
         p2 = pya.DPath([c3, c4], self.cthick)
-        
+
         l2 = pya.Region()
         l2.insert(p2)
-        
-        result =l0 - l1 - l2
+
+        result = l0 - l1 - l2
         self.cell.shapes(self.l_layer).insert(result)
+
 
 class AlignArray(pya.PCellDeclarationHelper):
     """
@@ -658,78 +675,86 @@ class AlignArray(pya.PCellDeclarationHelper):
 
         # declare the parameters
         self.param("l", self.TypeLayer, "Layer", default=pya.LayerInfo(1, 0))
-        
+
         self.param("width", self.TypeDouble, "Rectangle width", default=300.0)
-        self.param("length", self.TypeDouble, "Rectangle length", default=300.0)
-        
+        self.param("length", self.TypeDouble,
+                   "Rectangle length", default=300.0)
+
         self.param("cwidth", self.TypeDouble, "Cross width", default=200.0)
         self.param("clength", self.TypeDouble, "Cross length", default=200.0)
         self.param("cthick", self.TypeDouble, "Cross thickness", default=10.0)
-        
+
         self.param("rows", self.TypeInt, "Number of rows", default=2)
         self.param("columns", self.TypeInt, "Number of columns", default=2)
-        
+
         self.param("row_step", self.TypeDouble, "Row step", default=300.0)
         self.param("col_step", self.TypeDouble, "Col step", default=300.0)
-        
-        self.param("text_distance", self.TypeDouble, "Text distance", default=75.0)
-        self.param("text_scale", self.TypeDouble, "Text scaling factor", default=0.04)
-    
+
+        self.param("text_distance", self.TypeDouble,
+                   "Text distance", default=75.0)
+        self.param("text_scale", self.TypeDouble,
+                   "Text scaling factor", default=0.04)
+
     def display_text_impl(self):
         # Provide a descriptive text for the cell
         return "AlignArray(L=%s)" % (str(self.l))
 
     def produce_impl(self):
-        
+
         scaling_factor = int(1/self.layout.dbu)
         print(scaling_factor)
-        x = np.linspace(0, self.rows, endpoint=False, num=self.rows, dtype=int)*self.row_step
-        y = np.linspace(0, self.columns, endpoint=False, num=self.columns,)*self.col_step
-        
-        XX,YY = np.meshgrid(x,y, indexing='ij')
-        
+        x = np.linspace(0, self.rows, endpoint=False,
+                        num=self.rows, dtype=int)*self.row_step
+        y = np.linspace(0, self.columns, endpoint=False,
+                        num=self.columns,)*self.col_step
+
+        XX, YY = np.meshgrid(x, y, indexing='ij')
+
         print(XX)
         print(YY)
-        
-        grid=np.zeros((self.rows,self.columns),dtype='i,i')
-        
-        for i in range(0, self.rows):
-          for j in range(0, self.columns):
-            grid[i,j] = (XX[i,j], YY[i,j])
-            print(grid[i,j])
-        
-        for p in grid.flatten():
-          c_x = float(p[0])
-          c_y = float(p[1])
-        
-          lower_left = pya.DPoint(c_x-self.width/2, c_y-self.length/2)
-          upper_right = pya.DPoint(c_x+self.width/2, c_y+self.length/2)
-          square = pya.DBox(lower_left*scaling_factor, upper_right*scaling_factor)
-        
-          l0 = pya.Region()
-          l0.insert(square)
 
-          c1 = pya.DPoint(c_x-self.cwidth/2.0, c_y)*scaling_factor
-          c2 = pya.DPoint(c_x+self.cwidth/2, c_y)*scaling_factor
-          p1 = pya.DPath([c1, c2], self.cthick*scaling_factor)
-        
-          l1 = pya.Region()
-          l1.insert(p1)
-        
-          c3 = pya.DPoint(c_x, c_y-self.clength/2)*scaling_factor
-          c4 = pya.DPoint(c_x, c_y+self.clength/2)*scaling_factor
-          p2 = pya.DPath([c3, c4], self.cthick*scaling_factor)
-          
-          l2 = pya.Region()
-          l2.insert(p2)
-          
-          label = pya.TextGenerator.default_generator().text("{},{}".format(int(p[0]-x.max()/2), int(p[1]-y.max()/2)), self.text_scale*self.layout.dbu).move(1000*(c_x-self.width/2 + self.width/40), 1000*c_y - 1000*self.text_distance)
-          
-          result = l0 - l1 - l2 - label
-          
-          self.cell.shapes(self.l_layer).insert(result)         
-          #self.cell.shapes(self.l_layer).insert(label)
-        
+        grid = np.zeros((self.rows, self.columns), dtype='i,i')
+
+        for i in range(0, self.rows):
+            for j in range(0, self.columns):
+                grid[i, j] = (XX[i, j], YY[i, j])
+                print(grid[i, j])
+
+        for p in grid.flatten():
+            c_x = float(p[0])
+            c_y = float(p[1])
+
+            lower_left = pya.DPoint(c_x-self.width/2, c_y-self.length/2)
+            upper_right = pya.DPoint(c_x+self.width/2, c_y+self.length/2)
+            square = pya.DBox(lower_left*scaling_factor,
+                              upper_right*scaling_factor)
+
+            l0 = pya.Region()
+            l0.insert(square)
+
+            c1 = pya.DPoint(c_x-self.cwidth/2.0, c_y)*scaling_factor
+            c2 = pya.DPoint(c_x+self.cwidth/2, c_y)*scaling_factor
+            p1 = pya.DPath([c1, c2], self.cthick*scaling_factor)
+
+            l1 = pya.Region()
+            l1.insert(p1)
+
+            c3 = pya.DPoint(c_x, c_y-self.clength/2)*scaling_factor
+            c4 = pya.DPoint(c_x, c_y+self.clength/2)*scaling_factor
+            p2 = pya.DPath([c3, c4], self.cthick*scaling_factor)
+
+            l2 = pya.Region()
+            l2.insert(p2)
+
+            label = pya.TextGenerator.default_generator().text("{},{}".format(int(p[0]-x.max()/2), int(p[1]-y.max(
+            )/2)), self.text_scale*self.layout.dbu).move(1000*(c_x-self.width/2 + self.width/40), 1000*c_y - 1000*self.text_distance)
+
+            result = l0 - l1 - l2 - label
+
+            self.cell.shapes(self.l_layer).insert(result)
+            # self.cell.shapes(self.l_layer).insert(label)
+
+
 class RayLib(pya.Library):
     """
     The library where we will put the PCell into 
@@ -739,7 +764,7 @@ class RayLib(pya.Library):
 
         # Set the description
         self.description = "Ray's PCell Library"
-    
+
         # Create the PCell declarations
         self.layout().register_pcell("Serpentine", Serpentine())
         self.layout().register_pcell("Meander", Meander())
@@ -749,12 +774,12 @@ class RayLib(pya.Library):
         self.layout().register_pcell("EtchTest_Circ", EtchTest_Circ())
         self.layout().register_pcell("EtchTest_Circ2", EtchTest_Circ2())
         self.layout().register_pcell("EtchTest_Circ3", EtchTest_Circ3())
-        
+
         self.layout().register_pcell("ExperimentalOhmics", ExperimentalOhmics())
         self.layout().register_pcell("RCLine", RCLine())
         self.layout().register_pcell("Align", Align())
         self.layout().register_pcell("AlignArray", AlignArray())
-        
+
         # Register us with the name "SerpentineLib".
         self.register("RayLib")
 
