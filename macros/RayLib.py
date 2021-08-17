@@ -2,7 +2,6 @@ import pya
 import math
 import numpy as np
 
-
 class Serpentine(pya.PCellDeclarationHelper):
     """
     The PCell declaration for the Serpentine
@@ -165,7 +164,7 @@ class Meander(pya.PCellDeclarationHelper):
 
         self.cell.shapes(self.l_layer).insert(
             pya.DPath(bond_line_left_pts, self.w))
-
+            
 
 class RCMeander(pya.PCellDeclarationHelper):
     """
@@ -176,7 +175,6 @@ class RCMeander(pya.PCellDeclarationHelper):
 
         # Important: initialize the super class
         super(RCMeander, self).__init__()
-
         # declare the parameters
         self.param("l", self.TypeLayer, "Layer", default=pya.LayerInfo(1, 0))
         self.param("n", self.TypeInt, "Number of turns", default=9)
@@ -196,7 +194,7 @@ class RCMeander(pya.PCellDeclarationHelper):
     def produce_impl(self):
         pts = []
         box_pts = dict()
-
+        
         x = 0.0
         y = self.s/2.
 
@@ -242,68 +240,58 @@ class RCMeander(pya.PCellDeclarationHelper):
             y = self.s/2
         pts.append(pya.DPoint(x, y))
 
+        
         path = pya.DPath(pts, self.w)
         path_area = path.area()
        # m = obj.trans.mag * layout.dbu
         #total_area += a * m * m
         # create the shape
         self.cell.shapes(self.l_layer).insert(path)
-
+        
         for k in box_pts.keys():
             self.cell.shapes(self.l_layer).insert(
                 pya.DBox(box_pts[k][0], box_pts[k][1]))
 
         bond_line_right_pts = []
         bond_line_right_pts.append(pya.DPoint(pts[0].x + self.w/2, pts[0].y))
-        bond_line_right_pts.append(pya.DPoint(
-            pts[0].x - self.bl - self.w/2, pts[0].y))
-
+        bond_line_right_pts.append(pya.DPoint(pts[0].x - self.bl - self.w/2, pts[0].y))
+        
         bond_path_right = pya.DPath(bond_line_right_pts, self.w)
         self.cell.shapes(self.l_layer).insert(bond_path_right)
 
         bond_line_left_pts = []
         bond_line_left_pts.append(pya.DPoint(pts[-1].x - self.w/2, pts[-1].y))
-        bond_line_left_pts.append(pya.DPoint(
-            pts[-1].x + self.bl + self.w/2, pts[-1].y))
+        bond_line_left_pts.append(pya.DPoint(pts[-1].x + self.bl + self.w/2, pts[-1].y))
         bond_paths_left = pya.DPath(bond_line_left_pts, self.w)
 
         self.cell.shapes(self.l_layer).insert(bond_paths_left)
         bond_line_area = bond_paths_left.area() - self.w**2
         print("Total area: {} um".format(path_area + bond_line_area))
-
+        
         bond_pad_pts_right = []
-        bond_pad_pts_right.append(pya.DPoint(
-            bond_line_right_pts[-1].x - self.bw, bond_line_right_pts[-1].y-self.bw/2))
-        bond_pad_pts_right.append(pya.DPoint(
-            bond_line_right_pts[-1].x, bond_line_right_pts[-1].y+self.bw/2))
-        self.cell.shapes(self.l_layer).insert(
-            pya.DBox(bond_pad_pts_right[0], bond_pad_pts_right[1]))
-
+        bond_pad_pts_right.append(pya.DPoint(bond_line_right_pts[-1].x - self.bw, bond_line_right_pts[-1].y-self.bw/2))
+        bond_pad_pts_right.append(pya.DPoint(bond_line_right_pts[-1].x , bond_line_right_pts[-1].y+self.bw/2))
+        self.cell.shapes(self.l_layer).insert(pya.DBox(bond_pad_pts_right[0], bond_pad_pts_right[1]))
+        
         bond_pad_pts_left = []
-        bond_pad_pts_left.append(pya.DPoint(
-            bond_line_left_pts[-1].x + self.bw, bond_line_left_pts[-1].y-self.bw/2))
-        bond_pad_pts_left.append(pya.DPoint(
-            bond_line_left_pts[-1].x, bond_line_left_pts[-1].y+self.bw/2))
-        self.cell.shapes(self.l_layer).insert(
-            pya.DBox(bond_pad_pts_left[0], bond_pad_pts_left[1]))
-
-        # the number of squares without accouting for additional rectangular pads is
-        length = self.bl + (self.n + 1)*(self.s - self.w) + \
-            (self.n + 1)*(self.u - self.w)
-        squares_mod = length/self.w + (2*self.n + 4)/2
+        bond_pad_pts_left.append(pya.DPoint(bond_line_left_pts[-1].x + self.bw, bond_line_left_pts[-1].y-self.bw/2))
+        bond_pad_pts_left.append(pya.DPoint(bond_line_left_pts[-1].x , bond_line_left_pts[-1].y+self.bw/2))
+        self.cell.shapes(self.l_layer).insert(pya.DBox(bond_pad_pts_left[0], bond_pad_pts_left[1]))
+        
+        # the number of squares without accouting for additional rectangular pads is 
+        length = self.bl + (self.n + 1)*(self.s - self.w)  + (self.n + 1)*(self.u - self.w)
+        squares_mod = length/self.w + (2*self.n + 4)/2 
         squares = length/self.w + (2*self.n + 4)
-
+        
         print("Turns: {}".format(2*self.n + 4))
         # valid iff the pitch and length of meander line are both non-zero
         # this value ignores the contribution from the bonf pads
         print("Squares: {}".format(squares))
         print("Squares: {} (modified)".format(squares_mod))
-
+        
         # the length of the meander line, without accounting for the bond pads
         meander_length = 2*self.bl + (self.n+1)*self.u + self.w
-        print("Length: {} (modified)".format(meander_length))
-
-
+        print("Length: {} (modified)".format(meander_length)) 
 class EtchTest_Box(pya.PCellDeclarationHelper):
     """
     The PCell declaration for the Meander
