@@ -98,9 +98,9 @@ class Meander(pya.PCellDeclarationHelper):
         y -= self.ml/2.
         print(x, y)
         pts.append(pya.DPoint(x, y))
-        
+
         for i in range(0, self.n):
-            
+
             x += self.u
             print(x, y)
             pts.append(pya.DPoint(x, y))
@@ -202,9 +202,9 @@ class RCMeander(pya.PCellDeclarationHelper):
         pts.append(pya.DPoint(x, y))
         y -= self.ml/2.
         pts.append(pya.DPoint(x, y))
-        
+
         for i in range(0, self.n):
-            
+
             x += self.p
             pts.append(pya.DPoint(x, y))
 
@@ -212,7 +212,7 @@ class RCMeander(pya.PCellDeclarationHelper):
                 y += self.ml
             else:
                 y -= self.ml
-                
+
             pts.append(pya.DPoint(x, y))
 
             if (i % 2) == 0:
@@ -239,10 +239,10 @@ class RCMeander(pya.PCellDeclarationHelper):
         else:
             y = self.ml/2
         pts.append(pya.DPoint(x, y))
-        
+
         for p in pts:
             print(p.x, p.y)
-        
+
         path = pya.DPath(pts, self.w)
         path_area = path.area()
        # m = obj.trans.mag * layout.dbu
