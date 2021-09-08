@@ -2,7 +2,6 @@ import pya
 import math
 import numpy as np
 
-
 class Serpentine(pya.PCellDeclarationHelper):
     """
     The PCell declaration for Serpentine
