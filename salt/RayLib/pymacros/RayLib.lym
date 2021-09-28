@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<klayout-macro>
+ <description>Ruiheng Su's Package for Qdev UBC</description>
+ <version/>
+ <category>pymacros</category>
+ <prolog/>
+ <epilog/>
+ <doc/>
+ <autorun>true</autorun>
+ <autorun-early>false</autorun-early>
+ <shortcut/>
+ <show-in-menu>false</show-in-menu>
+ <group-name/>
+ <menu-path/>
+ <interpreter>python</interpreter>
+ <dsl-interpreter-name/>
+ <text># Ruiheng Su's Custom Klayout Library
+
+import pya 
+from Align import Align
+from AlignArray import AlignArray
+from CrossArray import CrossArray
+from EtchTest_Box import EtchTest_Box
+from EtchTest_Box2 import EtchTest_Box2
+from EtchTest_Box3 import EtchTest_Box3
+from EtchTest_Circ import EtchTest_Circ
+from EtchTest_Circ2 import EtchTest_Circ2
+from EtchTest_Circ3 import EtchTest_Circ3
+from ExperimentalOhmics import ExperimentalOhmics
+
+from RCLine import RCLine
+from Meander import Meander
+from RCMeander import RCMeander
+from Serpentine import Serpentine
+
+class RayLib(pya.Library):
+    """
+    The library where we will put the PCell into 
+    """
+
+    def __init__(self):
+
+        # Set the description
+        self.description = "Ray's PCell Library"
+
+        # Create the PCell declarations
+        self.layout().register_pcell("Serpentine", Serpentine())
+        self.layout().register_pcell("Meander", Meander())
+        self.layout().register_pcell("RCLine", RCLine())
+        self.layout().register_pcell("RCMeander", RCMeander())
+        
+        self.layout().register_pcell("SingleOhmicContact", SingleOhmicContact())
+        
+        self.layout().register_pcell("SingleAlignMark", SingleAlignMark())
+        self.layout().register_pcell("AlignMarkArray", AlignMarkArray())
+        self.layout().register_pcell("CrossArray", CrossArray())
+        
+        self.layout().register_pcell("EtchTest_Box", EtchTest_Box())
+        self.layout().register_pcell("EtchTest_Box2", EtchTest_Box2())
+        self.layout().register_pcell("EtchTest_Box3", EtchTest_Box3())
+        self.layout().register_pcell("EtchTest_Circ", EtchTest_Circ())
+        self.layout().register_pcell("EtchTest_Circ2", EtchTest_Circ2())
+        self.layout().register_pcell("EtchTest_Circ3", EtchTest_Circ3())
+
+        # Register us with the name "SerpentineLib".
+        self.register("RayLib")
+
+# Instantiate and register the library
+RayLib()</text>
+</klayout-macro>

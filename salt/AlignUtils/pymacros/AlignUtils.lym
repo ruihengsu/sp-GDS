@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<klayout-macro>
+ <description>Alignment Mark Utilies</description>
+ <version/>
+ <category>pymacros</category>
+ <prolog/>
+ <epilog/>
+ <doc/>
+ <autorun>true</autorun>
+ <autorun-early>false</autorun-early>
+ <shortcut/>
+ <show-in-menu>false</show-in-menu>
+ <group-name/>
+ <menu-path/>
+ <interpreter>python</interpreter>
+ <dsl-interpreter-name/>
+ <text># Alignment Mark Utilies
+
+import pya 
+
+from CrossArray import CrossArray
+from AlignMarkArray import AlignMarkArray
+from SingleAlignMark import SingleAlignMark
+
+class AlignUtils(pya.Library):
+
+    def __init__(self):
+
+        # Set the description
+        self.description = "Alignment Mark Utilies by Ruiheng Su"
+
+        # Create the PCell declarations
+        self.layout().register_pcell("SingleAlignMark", SingleAlignMark())
+        self.layout().register_pcell("AlignMarkArray", AlignMarkArray())
+        self.layout().register_pcell("CrossArray", CrossArray())
+        
+        self.register("AlignUtils")
+
+# Instantiate and register the library
+AlignUtils()</text>
+</klayout-macro>
