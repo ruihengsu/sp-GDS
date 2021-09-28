@@ -1,10 +1,9 @@
 import pya
-import math
 import numpy as np
 
 class CrossArray(pya.PCellDeclarationHelper):
     """
-    The PCell declaration for the Serpentine
+    The PCell declaration for the CrossArray
     """
 
     def __init__(self):

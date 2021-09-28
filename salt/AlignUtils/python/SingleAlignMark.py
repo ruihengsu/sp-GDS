@@ -1,10 +1,8 @@
 import pya
-import math
-import numpy as np
 
 class SingleAlignMark(pya.PCellDeclarationHelper):
     """
-    The PCell declaration for the Serpentine
+    The PCell declaration for the SingleAlignMark
     """
 
     def __init__(self):

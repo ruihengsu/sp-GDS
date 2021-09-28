@@ -5,8 +5,8 @@
  <hidden>false</hidden>
  <version>0.0</version>
  <api-version/>
- <title>Python Library</title>
- <doc>This template provides a Python library.</doc>
+ <!-- <title>Python Library</title>
+ <doc>This template provides a Python library.</doc> -->
  <doc-url>doc/readme.html</doc-url>
  <url/>
  <!-- <license>GPLv3</license> -->

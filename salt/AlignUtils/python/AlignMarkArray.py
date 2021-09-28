@@ -1,10 +1,9 @@
 import pya
-import math
 import numpy as np
 
 class AlignMarkArray(pya.PCellDeclarationHelper):
     """
-    The PCell declaration for the Serpentine
+    The PCell declaration for the AlignMarkArray
     """
 
     def __init__(self):
