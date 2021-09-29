@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <klayout-macro>
- <description>Ruiheng Su's Package for Qdev UBC</description>
+ <description>Ray</description>
  <version/>
  <category>pymacros</category>
  <prolog/>
@@ -14,12 +14,15 @@
  <menu-path/>
  <interpreter>python</interpreter>
  <dsl-interpreter-name/>
- <text># Ruiheng Su's Custom Klayout Library
+ <text>
+ 
+# Ray's Klayout Library For Maskless Photolithography
 
 import pya 
 from Align import Align
 from AlignArray import AlignArray
 from CrossArray import CrossArray
+
 from EtchTest_Box import EtchTest_Box
 from EtchTest_Box2 import EtchTest_Box2
 from EtchTest_Box3 import EtchTest_Box3
@@ -33,7 +36,7 @@ from Meander import Meander
 from RCMeander import RCMeander
 from Serpentine import Serpentine
 
-class RayLib(pya.Library):
+class Ray(pya.Library):
     """
     The library where we will put the PCell into 
     """
@@ -63,8 +66,10 @@ class RayLib(pya.Library):
         self.layout().register_pcell("EtchTest_Circ3", EtchTest_Circ3())
 
         # Register us with the name "SerpentineLib".
-        self.register("RayLib")
+        self.register("Ray")
 
 # Instantiate and register the library
-RayLib()</text>
+Ray()
+
+</text>
 </klayout-macro>
