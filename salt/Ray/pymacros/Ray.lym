@@ -16,7 +16,7 @@
  <dsl-interpreter-name/>
  <text># Ray's Klayout Library For Maskless Photolithography
 
-import pya 
+import pya
 
 from SingleAlignMark import SingleAlignMark
 from SingleOverlayCross import SingleOverlayCross

@@ -1,3 +1,6 @@
+import pya
+import numpy as np
+
 class OverlayAlignMarkArray(pya.PCellDeclarationHelper):
     """
     The PCell declaration for the OverlayAlignMarkArray
