@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <klayout-macro>
  <description>Ray</description>
- <version/>
+ <version>1.0</version>
  <category>pymacros</category>
  <prolog/>
  <epilog/>
@@ -14,14 +14,18 @@
  <menu-path/>
  <interpreter>python</interpreter>
  <dsl-interpreter-name/>
- <text>
- 
-# Ray's Klayout Library For Maskless Photolithography
+ <text># Ray's Klayout Library For Maskless Photolithography
 
 import pya 
-from Align import Align
-from AlignArray import AlignArray
+
+from SingleAlignMark import SingleAlignMark
+from SingleOverlayCross import SingleOverlayCross
+from SingleOverlayAlignmentMark import SingleOverlayAlignmentMark
+
 from CrossArray import CrossArray
+from AlignMarkArray import AlignMarkArray
+from OverlayCrossArray import OverlayCrossArray
+from OverlayAlignMarkArray import OverlayAlignMarkArray
 
 from EtchTest_Box import EtchTest_Box
 from EtchTest_Box2 import EtchTest_Box2
@@ -29,7 +33,7 @@ from EtchTest_Box3 import EtchTest_Box3
 from EtchTest_Circ import EtchTest_Circ
 from EtchTest_Circ2 import EtchTest_Circ2
 from EtchTest_Circ3 import EtchTest_Circ3
-from ExperimentalOhmics import ExperimentalOhmics
+from SingleOhmicContact import SingleOhmicContact
 
 from RCLine import RCLine
 from Meander import Meander
@@ -55,8 +59,13 @@ class Ray(pya.Library):
         self.layout().register_pcell("SingleOhmicContact", SingleOhmicContact())
         
         self.layout().register_pcell("SingleAlignMark", SingleAlignMark())
-        self.layout().register_pcell("AlignMarkArray", AlignMarkArray())
+        self.layout().register_pcell("SingleOverlayAlignmentMark", SingleOverlayAlignmentMark())
+        self.layout().register_pcell("SingleOverlayCross", SingleOverlayCross())
+        
         self.layout().register_pcell("CrossArray", CrossArray())
+        self.layout().register_pcell("AlignMarkArray", AlignMarkArray())
+        self.layout().register_pcell("OverlayCrossArray", OverlayCrossArray())
+        self.layout().register_pcell("OverlayAlignMarkArray", OverlayAlignMarkArray())
         
         self.layout().register_pcell("EtchTest_Box", EtchTest_Box())
         self.layout().register_pcell("EtchTest_Box2", EtchTest_Box2())

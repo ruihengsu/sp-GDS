@@ -21,7 +21,7 @@ class SingleAlignMark(pya.PCellDeclarationHelper):
         self.param("cwidth", self.TypeDouble, "Cross width", default=200.0)
         self.param("clength", self.TypeDouble, "Cross length", default=200.0)
         self.param("cthick", self.TypeDouble, "Cross thickness", default=10.0)
-
+    
     def display_text_impl(self):
         # Provide a descriptive text for the cell
         return "SingleAlignMark(L=%s)" % (str(self.l))
@@ -47,6 +47,8 @@ class SingleAlignMark(pya.PCellDeclarationHelper):
 
         l2 = pya.Region()
         l2.insert(p2)
+        
+        
 
         result = l0 - l1 - l2
         self.cell.shapes(self.l_layer).insert(result)
