@@ -36,6 +36,7 @@ from EtchTest_Circ3 import EtchTest_Circ3
 from SingleOhmicContact import SingleOhmicContact
 
 from RCLine import RCLine
+from RCLineArray import RCLineArray
 from Meander import Meander
 from RCMeander import RCMeander
 from Serpentine import Serpentine
@@ -54,6 +55,7 @@ class Ray(pya.Library):
         self.layout().register_pcell("Serpentine", Serpentine())
         self.layout().register_pcell("Meander", Meander())
         self.layout().register_pcell("RCLine", RCLine())
+        self.layout().register_pcell("RCLineArray", RCLineArray())
         self.layout().register_pcell("RCMeander", RCMeander())
         
         self.layout().register_pcell("SingleOhmicContact", SingleOhmicContact())
