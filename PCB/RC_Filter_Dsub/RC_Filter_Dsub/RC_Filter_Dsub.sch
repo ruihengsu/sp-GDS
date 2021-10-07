@@ -1,0 +1,346 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "25 micro d-sub 2 rows to bond pad"
+Date "2021-10-06"
+Rev "1"
+Comp "Qdev UBC"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L RC_Filter_Dsub:M83513_13-D01CP J1
+U 1 1 615E409A
+P 6750 2650
+F 0 "J1" H 7278 1456 60  0000 L CNN
+F 1 "M83513_13-D01CP" H 7278 1350 60  0000 L CNN
+F 2 "RC_Filter_Dsub:M83513&slash_13-D01CP" H 7278 1244 60  0000 L CNN
+F 3 "" H 6750 2650 60  0000 C CNN
+	1    6750 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L RC_Filter_Dsub:BondPad U4
+U 1 1 615FFE12
+P 5700 2850
+F 0 "U4" H 5642 2635 50  0000 C CNN
+F 1 "BondPad" H 5642 2726 50  0000 C CNN
+F 2 "RC_Filter_Dsub:BondPad" H 5700 2850 50  0001 C CNN
+F 3 "" H 5700 2850 50  0001 C CNN
+	1    5700 2850
+	-1   0    0    1   
+$EndComp
+$Comp
+L RC_Filter_Dsub:BondPad U6
+U 1 1 6160177D
+P 5300 2950
+F 0 "U6" H 5242 2735 50  0000 C CNN
+F 1 "BondPad" H 5242 2826 50  0000 C CNN
+F 2 "RC_Filter_Dsub:BondPad" H 5300 2950 50  0001 C CNN
+F 3 "" H 5300 2950 50  0001 C CNN
+	1    5300 2950
+	-1   0    0    1   
+$EndComp
+$Comp
+L RC_Filter_Dsub:BondPad U8
+U 1 1 61603C16
+P 4900 3050
+F 0 "U8" H 4842 2835 50  0000 C CNN
+F 1 "BondPad" H 4842 2926 50  0000 C CNN
+F 2 "RC_Filter_Dsub:BondPad" H 4900 3050 50  0001 C CNN
+F 3 "" H 4900 3050 50  0001 C CNN
+	1    4900 3050
+	-1   0    0    1   
+$EndComp
+$Comp
+L RC_Filter_Dsub:BondPad U10
+U 1 1 61604170
+P 4500 3150
+F 0 "U10" H 4442 2935 50  0000 C CNN
+F 1 "BondPad" H 4442 3026 50  0000 C CNN
+F 2 "RC_Filter_Dsub:BondPad" H 4500 3150 50  0001 C CNN
+F 3 "" H 4500 3150 50  0001 C CNN
+	1    4500 3150
+	-1   0    0    1   
+$EndComp
+$Comp
+L RC_Filter_Dsub:BondPad U12
+U 1 1 6160A3FF
+P 3700 3350
+F 0 "U12" H 3642 3135 50  0000 C CNN
+F 1 "BondPad" H 3642 3226 50  0000 C CNN
+F 2 "RC_Filter_Dsub:BondPad" H 3700 3350 50  0001 C CNN
+F 3 "" H 3700 3350 50  0001 C CNN
+	1    3700 3350
+	-1   0    0    1   
+$EndComp
+$Comp
+L RC_Filter_Dsub:BondPad U17
+U 1 1 6160AC44
+P 2500 3650
+F 0 "U17" H 2442 3435 50  0000 C CNN
+F 1 "BondPad" H 2442 3526 50  0000 C CNN
+F 2 "RC_Filter_Dsub:BondPad" H 2500 3650 50  0001 C CNN
+F 3 "" H 2500 3650 50  0001 C CNN
+	1    2500 3650
+	-1   0    0    1   
+$EndComp
+$Comp
+L RC_Filter_Dsub:BondPad U7
+U 1 1 6160D7CE
+P 6100 3850
+F 0 "U7" H 6042 3635 50  0000 C CNN
+F 1 "BondPad" H 6042 3726 50  0000 C CNN
+F 2 "RC_Filter_Dsub:BondPad" H 6100 3850 50  0001 C CNN
+F 3 "" H 6100 3850 50  0001 C CNN
+	1    6100 3850
+	-1   0    0    1   
+$EndComp
+$Comp
+L RC_Filter_Dsub:BondPad U5
+U 1 1 6160E0A6
+P 6500 3750
+F 0 "U5" H 6442 3535 50  0000 C CNN
+F 1 "BondPad" H 6442 3626 50  0000 C CNN
+F 2 "RC_Filter_Dsub:BondPad" H 6500 3750 50  0001 C CNN
+F 3 "" H 6500 3750 50  0001 C CNN
+	1    6500 3750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6350 2750 6750 2750
+Wire Wire Line
+	5950 2850 6750 2850
+Wire Wire Line
+	5550 2950 6750 2950
+$Comp
+L RC_Filter_Dsub:BondPad U11
+U 1 1 616110C9
+P 4100 3250
+F 0 "U11" H 4042 3035 50  0000 C CNN
+F 1 "BondPad" H 4042 3126 50  0000 C CNN
+F 2 "RC_Filter_Dsub:BondPad" H 4100 3250 50  0001 C CNN
+F 3 "" H 4100 3250 50  0001 C CNN
+	1    4100 3250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5150 3050 6750 3050
+Wire Wire Line
+	4750 3150 6750 3150
+Wire Wire Line
+	4350 3250 6750 3250
+$Comp
+L RC_Filter_Dsub:BondPad U1
+U 1 1 61613AC6
+P 3300 3450
+F 0 "U1" H 3242 3235 50  0000 C CNN
+F 1 "BondPad" H 3242 3326 50  0000 C CNN
+F 2 "RC_Filter_Dsub:BondPad" H 3300 3450 50  0001 C CNN
+F 3 "" H 3300 3450 50  0001 C CNN
+	1    3300 3450
+	-1   0    0    1   
+$EndComp
+$Comp
+L RC_Filter_Dsub:BondPad U15
+U 1 1 61613F80
+P 2900 3550
+F 0 "U15" H 2842 3335 50  0000 C CNN
+F 1 "BondPad" H 2842 3426 50  0000 C CNN
+F 2 "RC_Filter_Dsub:BondPad" H 2900 3550 50  0001 C CNN
+F 3 "" H 2900 3550 50  0001 C CNN
+	1    2900 3550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3950 3350 6750 3350
+Wire Wire Line
+	3550 3450 6750 3450
+Wire Wire Line
+	3150 3550 6750 3550
+Wire Wire Line
+	2750 3650 6750 3650
+$Comp
+L RC_Filter_Dsub:BondPad U9
+U 1 1 616170F9
+P 5700 3950
+F 0 "U9" H 5642 3735 50  0000 C CNN
+F 1 "BondPad" H 5642 3826 50  0000 C CNN
+F 2 "RC_Filter_Dsub:BondPad" H 5700 3950 50  0001 C CNN
+F 3 "" H 5700 3950 50  0001 C CNN
+	1    5700 3950
+	-1   0    0    1   
+$EndComp
+$Comp
+L RC_Filter_Dsub:BondPad U22
+U 1 1 61617852
+P 5300 4050
+F 0 "U22" H 5242 3835 50  0000 C CNN
+F 1 "BondPad" H 5242 3926 50  0000 C CNN
+F 2 "RC_Filter_Dsub:BondPad" H 5300 4050 50  0001 C CNN
+F 3 "" H 5300 4050 50  0001 C CNN
+	1    5300 4050
+	-1   0    0    1   
+$EndComp
+$Comp
+L RC_Filter_Dsub:BondPad U24
+U 1 1 61617CFA
+P 4900 4150
+F 0 "U24" H 4842 3935 50  0000 C CNN
+F 1 "BondPad" H 4842 4026 50  0000 C CNN
+F 2 "RC_Filter_Dsub:BondPad" H 4900 4150 50  0001 C CNN
+F 3 "" H 4900 4150 50  0001 C CNN
+	1    4900 4150
+	-1   0    0    1   
+$EndComp
+$Comp
+L RC_Filter_Dsub:BondPad U13
+U 1 1 61618146
+P 4500 4250
+F 0 "U13" H 4442 4035 50  0000 C CNN
+F 1 "BondPad" H 4442 4126 50  0000 C CNN
+F 2 "RC_Filter_Dsub:BondPad" H 4500 4250 50  0001 C CNN
+F 3 "" H 4500 4250 50  0001 C CNN
+	1    4500 4250
+	-1   0    0    1   
+$EndComp
+$Comp
+L RC_Filter_Dsub:BondPad U14
+U 1 1 616187FF
+P 4100 4350
+F 0 "U14" H 4042 4135 50  0000 C CNN
+F 1 "BondPad" H 4042 4226 50  0000 C CNN
+F 2 "RC_Filter_Dsub:BondPad" H 4100 4350 50  0001 C CNN
+F 3 "" H 4100 4350 50  0001 C CNN
+	1    4100 4350
+	-1   0    0    1   
+$EndComp
+$Comp
+L RC_Filter_Dsub:BondPad U16
+U 1 1 61618EFE
+P 3700 4450
+F 0 "U16" H 3642 4235 50  0000 C CNN
+F 1 "BondPad" H 3642 4326 50  0000 C CNN
+F 2 "RC_Filter_Dsub:BondPad" H 3700 4450 50  0001 C CNN
+F 3 "" H 3700 4450 50  0001 C CNN
+	1    3700 4450
+	-1   0    0    1   
+$EndComp
+$Comp
+L RC_Filter_Dsub:BondPad U18
+U 1 1 616193E9
+P 3300 4550
+F 0 "U18" H 3242 4335 50  0000 C CNN
+F 1 "BondPad" H 3242 4426 50  0000 C CNN
+F 2 "RC_Filter_Dsub:BondPad" H 3300 4550 50  0001 C CNN
+F 3 "" H 3300 4550 50  0001 C CNN
+	1    3300 4550
+	-1   0    0    1   
+$EndComp
+$Comp
+L RC_Filter_Dsub:BondPad U19
+U 1 1 6161991E
+P 2900 4650
+F 0 "U19" H 2842 4435 50  0000 C CNN
+F 1 "BondPad" H 2842 4526 50  0000 C CNN
+F 2 "RC_Filter_Dsub:BondPad" H 2900 4650 50  0001 C CNN
+F 3 "" H 2900 4650 50  0001 C CNN
+	1    2900 4650
+	-1   0    0    1   
+$EndComp
+$Comp
+L RC_Filter_Dsub:BondPad U20
+U 1 1 61619D88
+P 2500 4750
+F 0 "U20" H 2442 4535 50  0000 C CNN
+F 1 "BondPad" H 2442 4626 50  0000 C CNN
+F 2 "RC_Filter_Dsub:BondPad" H 2500 4750 50  0001 C CNN
+F 3 "" H 2500 4750 50  0001 C CNN
+	1    2500 4750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6350 3850 6750 3850
+Wire Wire Line
+	5950 3950 6750 3950
+Wire Wire Line
+	5550 4050 6750 4050
+Wire Wire Line
+	5150 4150 6750 4150
+Wire Wire Line
+	4750 4250 6750 4250
+Wire Wire Line
+	4350 4350 6750 4350
+Wire Wire Line
+	3950 4450 6750 4450
+Wire Wire Line
+	3550 4550 6750 4550
+Wire Wire Line
+	3150 4650 6750 4650
+Wire Wire Line
+	2750 4750 6750 4750
+$Comp
+L RC_Filter_Dsub:BondPad U21
+U 1 1 6161E791
+P 6500 4850
+F 0 "U21" H 6442 4635 50  0000 C CNN
+F 1 "BondPad" H 6442 4726 50  0000 C CNN
+F 2 "RC_Filter_Dsub:BondPad" H 6500 4850 50  0001 C CNN
+F 3 "" H 6500 4850 50  0001 C CNN
+	1    6500 4850
+	-1   0    0    1   
+$EndComp
+$Comp
+L RC_Filter_Dsub:BondPad U23
+U 1 1 6161ECE1
+P 6100 4950
+F 0 "U23" H 6042 4735 50  0000 C CNN
+F 1 "BondPad" H 6042 4826 50  0000 C CNN
+F 2 "RC_Filter_Dsub:BondPad" H 6100 4950 50  0001 C CNN
+F 3 "" H 6100 4950 50  0001 C CNN
+	1    6100 4950
+	-1   0    0    1   
+$EndComp
+$Comp
+L RC_Filter_Dsub:BondPad U25
+U 1 1 6161F275
+P 5700 5050
+F 0 "U25" H 5642 4835 50  0000 C CNN
+F 1 "BondPad" H 5642 4926 50  0000 C CNN
+F 2 "RC_Filter_Dsub:BondPad" H 5700 5050 50  0001 C CNN
+F 3 "" H 5700 5050 50  0001 C CNN
+	1    5700 5050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6350 4950 6750 4950
+Wire Wire Line
+	5950 5050 6750 5050
+$Comp
+L RC_Filter_Dsub:BondPad U3
+U 1 1 615FF3E0
+P 6100 2750
+F 0 "U3" H 6042 2535 50  0000 C CNN
+F 1 "BondPad" H 6042 2626 50  0000 C CNN
+F 2 "RC_Filter_Dsub:BondPad" H 6100 2750 50  0001 C CNN
+F 3 "" H 6100 2750 50  0001 C CNN
+	1    6100 2750
+	-1   0    0    1   
+$EndComp
+$Comp
+L RC_Filter_Dsub:BondPad U2
+U 1 1 615FE957
+P 6500 2650
+F 0 "U2" H 6442 2435 50  0000 C CNN
+F 1 "BondPad" H 6442 2526 50  0000 C CNN
+F 2 "RC_Filter_Dsub:BondPad" H 6500 2650 50  0001 C CNN
+F 3 "" H 6500 2650 50  0001 C CNN
+	1    6500 2650
+	-1   0    0    1   
+$EndComp
+$EndSCHEMATC

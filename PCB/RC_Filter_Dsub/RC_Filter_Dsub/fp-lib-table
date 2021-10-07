@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name digikey-footprints)(type KiCad)(uri "C:/Users/labuser/Documents/Ruiheng Su/digikey-kicad-library/digikey-footprints.pretty")(options "")(descr ""))
+  (lib (name RC_Filter_Dsub)(type KiCad)(uri ${KIPRJMOD}/RC_Filter_Dsub.pretty/RC_Filter_Dsub.pretty)(options "")(descr ""))
+)
