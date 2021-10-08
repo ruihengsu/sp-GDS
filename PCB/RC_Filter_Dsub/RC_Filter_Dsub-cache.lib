@@ -1,11 +1,28 @@
 EESchema-LIBRARY Version 2.4
 #encoding utf-8
 #
-# BondPad
+# Connector_TestPoint
 #
-DEF BondPad B 0 40 Y Y 1 F N
+DEF Connector_TestPoint TP 0 30 N N 1 F N
+F0 "TP" 0 270 50 H V C CNN
+F1 "Connector_TestPoint" 0 200 50 H V C CNN
+F2 "" 200 0 50 H I C CNN
+F3 "" 200 0 50 H I C CNN
+$FPLIST
+ Pin*
+ Test*
+$ENDFPLIST
+DRAW
+C 0 130 30 0 1 0 N
+X 1 1 0 0 100 U 50 50 1 1 P
+ENDDRAW
+ENDDEF
+#
+# RC_Filter_Dsub_BondPad
+#
+DEF RC_Filter_Dsub_BondPad B 0 40 Y Y 1 F N
 F0 "B" -50 0 50 H V C CNN
-F1 "BondPad" 0 100 50 H V C CNN
+F1 "RC_Filter_Dsub_BondPad" 0 100 50 H V C CNN
 F2 "" 0 0 50 H I C CNN
 F3 "" 0 0 50 H I C CNN
 DRAW
@@ -14,11 +31,11 @@ X ~ 1 -250 0 100 R 50 50 1 1 U
 ENDDRAW
 ENDDEF
 #
-# M83513_13-D01CP
+# RC_Filter_Dsub_M83513_13-D01CP
 #
-DEF M83513_13-D01CP J 0 10 Y N 1 F N
+DEF RC_Filter_Dsub_M83513_13-D01CP J 0 10 Y N 1 F N
 F0 "J" 350 250 60 H V C CNN
-F1 "M83513_13-D01CP" 350 -2800 60 H V C CNN
+F1 "RC_Filter_Dsub_M83513_13-D01CP" 350 -2800 60 H V C CNN
 F2 "RC_Filter_Dsub:M83513&slash_13-D01CP" 400 -2900 60 H V C CNN
 F3 "" 0 0 60 H V C CNN
 $FPLIST
@@ -129,6 +146,31 @@ X 6 6 0 -300 200 R 59 59 1 1 U
 X 7 7 0 -1200 200 R 59 59 1 1 U
 X 8 8 0 -400 200 R 59 59 1 1 U
 X 9 9 0 -1300 200 R 59 59 1 1 U
+ENDDRAW
+ENDDEF
+#
+# RC_Filter_Dsub_logo
+#
+DEF RC_Filter_Dsub_logo U 0 40 Y Y 1 F N
+F0 "U" 0 100 50 H V C CNN
+F1 "RC_Filter_Dsub_logo" 0 -100 50 H V C CNN
+F2 "RC_Filter_Dsub:sillyPhotons" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+S -50 50 50 -50 0 1 0 N
+ENDDRAW
+ENDDEF
+#
+# power_GND
+#
+DEF power_GND #PWR 0 0 Y Y 1 F P
+F0 "#PWR" 0 -250 50 H I C CNN
+F1 "power_GND" 0 -150 50 H V C CNN
+F2 "" 0 0 50 H I C CNN
+F3 "" 0 0 50 H I C CNN
+DRAW
+P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
+X GND 1 0 0 0 D 50 50 1 1 W N
 ENDDRAW
 ENDDEF
 #

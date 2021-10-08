@@ -317,36 +317,10 @@ F 3 "" H 5700 5050 50  0001 C CNN
 	1    5700 5050
 	-1   0    0    1   
 $EndComp
-$Comp
-L RC_Filter_Dsub:BondPad U26
-U 1 1 6161F638
-P 5300 5150
-F 0 "U26" H 5242 4935 50  0000 C CNN
-F 1 "BondPad" H 5242 5026 50  0000 C CNN
-F 2 "RC_Filter_Dsub:BondPad" H 5300 5150 50  0001 C CNN
-F 3 "" H 5300 5150 50  0001 C CNN
-	1    5300 5150
-	-1   0    0    1   
-$EndComp
 Wire Wire Line
 	6350 4950 6750 4950
 Wire Wire Line
 	5950 5050 6750 5050
-Wire Wire Line
-	5550 5150 6750 5150
-$Comp
-L RC_Filter_Dsub:BondPad U27
-U 1 1 616213E3
-P 4900 5250
-F 0 "U27" H 4842 5035 50  0000 C CNN
-F 1 "BondPad" H 4842 5126 50  0000 C CNN
-F 2 "RC_Filter_Dsub:BondPad" H 4900 5250 50  0001 C CNN
-F 3 "" H 4900 5250 50  0001 C CNN
-	1    4900 5250
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	5150 5250 6750 5250
 $Comp
 L RC_Filter_Dsub:BondPad U3
 U 1 1 615FF3E0
@@ -369,4 +343,51 @@ F 3 "" H 6500 2650 50  0001 C CNN
 	1    6500 2650
 	-1   0    0    1   
 $EndComp
+$Comp
+L RC_Filter_Dsub:logo U26
+U 1 1 615F8282
+P 7750 4950
+F 0 "U26" H 7828 4996 50  0000 L CNN
+F 1 "logo" H 7828 4905 50  0000 L CNN
+F 2 "RC_Filter_Dsub:sillyPhotons" H 7750 4950 50  0001 C CNN
+F 3 "" H 7750 4950 50  0001 C CNN
+	1    7750 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP1
+U 1 1 6161406B
+P 2450 5300
+F 0 "TP1" H 2508 5418 50  0000 L CNN
+F 1 "TestPoint" H 2508 5327 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Plated_Hole_D2.0mm" H 2650 5300 50  0001 C CNN
+F 3 "~" H 2650 5300 50  0001 C CNN
+	1    2450 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 616144D7
+P 2450 5300
+F 0 "#PWR01" H 2450 5050 50  0001 C CNN
+F 1 "GND" H 2455 5127 50  0000 C CNN
+F 2 "" H 2450 5300 50  0001 C CNN
+F 3 "" H 2450 5300 50  0001 C CNN
+	1    2450 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP2
+U 1 1 616158F7
+P 2100 5300
+F 0 "TP2" H 2158 5418 50  0000 L CNN
+F 1 "TestPoint" H 2158 5327 50  0000 L CNN
+F 2 "RC_Filter_Dsub:BondPad" H 2300 5300 50  0001 C CNN
+F 3 "~" H 2300 5300 50  0001 C CNN
+	1    2100 5300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2100 5300 2450 5300
+Connection ~ 2450 5300
 $EndSCHEMATC

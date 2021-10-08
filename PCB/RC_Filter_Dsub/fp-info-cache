@@ -1,4 +1,4 @@
-19974042648354887
+19977310092546588
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -73492,6 +73492,20 @@ M83513&slash_13-D01CP
 0
 25
 25
+RC_Filter_Dsub
+sillyPhotons
+
+
+0
+0
+0
+RC_Filter_Dsub
+ubc
+
+
+0
+0
+0
 RF
 Skyworks_SKY13575_639LF
 http://www.skyworksinc.com/uploads/documents/SKY13575_639LF_203270D.pdf

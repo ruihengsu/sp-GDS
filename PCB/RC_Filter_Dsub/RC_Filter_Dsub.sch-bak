@@ -343,4 +343,37 @@ F 3 "" H 6500 2650 50  0001 C CNN
 	1    6500 2650
 	-1   0    0    1   
 $EndComp
+$Comp
+L RC_Filter_Dsub:logo U26
+U 1 1 615F8282
+P 7750 4950
+F 0 "U26" H 7828 4996 50  0000 L CNN
+F 1 "logo" H 7828 4905 50  0000 L CNN
+F 2 "RC_Filter_Dsub:sillyPhotons" H 7750 4950 50  0001 C CNN
+F 3 "" H 7750 4950 50  0001 C CNN
+	1    7750 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint TP?
+U 1 1 6161406B
+P 2450 5300
+F 0 "TP?" H 2508 5418 50  0000 L CNN
+F 1 "TestPoint" H 2508 5327 50  0000 L CNN
+F 2 "" H 2650 5300 50  0001 C CNN
+F 3 "~" H 2650 5300 50  0001 C CNN
+	1    2450 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 616144D7
+P 2450 5300
+F 0 "#PWR?" H 2450 5050 50  0001 C CNN
+F 1 "GND" H 2455 5127 50  0000 C CNN
+F 2 "" H 2450 5300 50  0001 C CNN
+F 3 "" H 2450 5300 50  0001 C CNN
+	1    2450 5300
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
