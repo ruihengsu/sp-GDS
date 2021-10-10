@@ -33,10 +33,15 @@ from EtchTest_Box3 import EtchTest_Box3
 from EtchTest_Circ import EtchTest_Circ
 from EtchTest_Circ2 import EtchTest_Circ2
 from EtchTest_Circ3 import EtchTest_Circ3
+
+from LabelArray import LabelArray
+
 from SingleOhmicContact import SingleOhmicContact
+
 
 from RCLine import RCLine
 from RCLineArray import RCLineArray
+
 from Meander import Meander
 from RCMeander import RCMeander
 from Serpentine import Serpentine
@@ -56,14 +61,15 @@ class Ray(pya.Library):
         self.layout().register_pcell("Meander", Meander())
         self.layout().register_pcell("RCLine", RCLine())
         self.layout().register_pcell("RCLineArray", RCLineArray())
+
         self.layout().register_pcell("RCMeander", RCMeander())
-        
+
         self.layout().register_pcell("SingleOhmicContact", SingleOhmicContact())
-        
         self.layout().register_pcell("SingleAlignMark", SingleAlignMark())
         self.layout().register_pcell("SingleOverlayAlignmentMark", SingleOverlayAlignmentMark())
         self.layout().register_pcell("SingleOverlayCross", SingleOverlayCross())
         
+        self.layout().register_pcell("LabelArray", LabelArray())
         self.layout().register_pcell("CrossArray", CrossArray())
         self.layout().register_pcell("AlignMarkArray", AlignMarkArray())
         self.layout().register_pcell("OverlayCrossArray", OverlayCrossArray())
