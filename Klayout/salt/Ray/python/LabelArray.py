@@ -13,32 +13,30 @@ class LabelArray(pya.PCellDeclarationHelper):
 
         # declare the parameters
         self.param("l", self.TypeLayer, "Layer", default=pya.LayerInfo(1, 0))
-        self.param("nLabels", self.TypeInt, "Number of Labels", default=10)
-        self.param("text_distance", self.TypeDouble,
+        self.param("horizontal", self.TypeBoolean,
+                   "Horizontal labels?", default=True)
+        self.param("labels", self.TypeList,
+                   "List of labels", default=[1, 2, 3])
+        self.param("text_pitch", self.TypeDouble,
                    "Distance between adjacent Labels", default=10.)
-        for i in range(self.nLabels):
-            self.param(f"Label {i}", self.TypeString)
-        
+        self.param("text_scale", self.TypeDouble,
+                   "Text scaling factor", default=10)
+
     def display_text_impl(self):
         # Provide a descriptive text for the cell
         return "LabelArray(Layer=%s)" % (str(self.l))
 
     def produce_impl(self):
-        # This is the main part of the implementation: create the layout
-        # x = 0.0
-        # y = 0.0
-        # for i in range(0, len(self.WL)):
-        #     pts = []
-        #     pts.append(pya.DPoint(x, y))
-        #     x += float(self.WL[i])*self.Wscaling
-        #     y += float(self.L)
-        #     pts.append(pya.DPoint(x, y))
-        #     self.cell.shapes(self.l_layer).insert(pya.DBox(pts[0], pts[1]))
-        #     label = pya.TextGenerator.default_generator().text("{}".format(int(float(
-        #         self.WL[i])*self.labelscaling)), 0.05*self.layout.dbu).move(1000*pts[0].x, 1000*pts[0].y - 1000*self.text_distance)
 
-        #     self.cell.shapes(self.l_layer).insert(label)
+        scaling_factor = int(1/self.layout.dbu)
 
-        #     x += float(self.spacing)
-        #     y -= float(self.L)
-        pass
+        for i, lab in enumerate(self.labels):
+            label = pya.TextGenerator.default_generator().text(
+                "{}".format(lab), self.layout.dbu/self.text_scale)
+
+            if self.horizontal:
+                label = label.move(i*scaling_factor*self.text_pitch, 0)
+            else:
+                label = label.move(0, -i*scaling_factor*self.text_pitch)
+
+            self.cell.shapes(self.l_layer).insert(label)
