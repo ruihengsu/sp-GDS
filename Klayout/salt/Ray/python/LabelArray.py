@@ -16,7 +16,7 @@ class LabelArray(pya.PCellDeclarationHelper):
         self.param("horizontal", self.TypeBoolean,
                    "Horizontal labels?", default=True)
         self.param("labels", self.TypeList,
-                   "List of labels", default=[1, 2, 3])
+                   "List of labels", default=["1", "2", "3"])
         self.param("text_pitch", self.TypeDouble,
                    "Distance between adjacent Labels", default=10.)
         self.param("text_scale", self.TypeDouble,
@@ -29,8 +29,8 @@ class LabelArray(pya.PCellDeclarationHelper):
     def produce_impl(self):
 
         scaling_factor = int(1/self.layout.dbu)
-
         for i, lab in enumerate(self.labels):
+            lab = lab.strip()
             label = pya.TextGenerator.default_generator().text(
                 "{}".format(lab), self.layout.dbu/self.text_scale)
 
