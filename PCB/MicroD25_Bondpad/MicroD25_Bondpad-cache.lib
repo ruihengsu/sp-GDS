@@ -148,30 +148,6 @@ X 9 9 0 -1300 200 R 59 59 1 1 U
 ENDDRAW
 ENDDEF
 #
-# MicroD25_Bondpad_RayLogo
-#
-DEF MicroD25_Bondpad_RayLogo U 0 40 Y Y 1 F N
-F0 "U" 0 100 50 H V C CNN
-F1 "MicroD25_Bondpad_RayLogo" 0 -100 50 H V C CNN
-F2 "RC_Filter_Dsub:sillyPhotons" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-S -50 50 50 -50 0 1 0 N
-ENDDRAW
-ENDDEF
-#
-# MicroD25_Bondpad_UBCLogo
-#
-DEF MicroD25_Bondpad_UBCLogo U 0 40 Y Y 1 F N
-F0 "U" 0 150 50 H V C CNN
-F1 "MicroD25_Bondpad_UBCLogo" 0 -150 50 H V C CNN
-F2 "RC_Filter_Dsub:ubc" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
-DRAW
-S -50 50 50 -50 0 1 0 N
-ENDDRAW
-ENDDEF
-#
 # power_GND
 #
 DEF power_GND #PWR 0 0 Y Y 1 F P
