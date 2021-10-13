@@ -1,4 +1,4 @@
-19222611831846552
+19224245911611344
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -56228,7 +56228,7 @@ BondableMountHole
 Mounting Hole 2.2mm, M2, DIN965
 mounting hole 2.2mm m2 din965
 0
-4
+7
 1
 MicroD25_Bondpad
 M83513&slash_13-D01CP
@@ -56237,6 +56237,13 @@ M83513&slash_13-D01CP
 0
 25
 25
+MicroD25_Bondpad
+ToGND
+
+
+0
+1
+1
 MicroD25_Bondpad
 sillyPhotons
 

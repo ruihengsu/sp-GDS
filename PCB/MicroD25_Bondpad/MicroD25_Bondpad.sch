@@ -394,10 +394,10 @@ F 3 "" H 8550 5200 50  0001 C CNN
 	-1   0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR?
+L power:GND #PWR0101
 U 1 1 6168875C
 P 8700 5200
-F 0 "#PWR?" H 8700 4950 50  0001 C CNN
+F 0 "#PWR0101" H 8700 4950 50  0001 C CNN
 F 1 "GND" H 8705 5027 50  0000 C CNN
 F 2 "" H 8700 5200 50  0001 C CNN
 F 3 "" H 8700 5200 50  0001 C CNN
@@ -407,4 +407,64 @@ $EndComp
 Wire Wire Line
 	8700 5050 8700 5200
 Connection ~ 8700 5200
+$Comp
+L MicroD25_Bondpad:BondPad B28
+U 1 1 6168F51F
+P 8850 5050
+F 0 "B28" H 8950 5100 50  0000 C CNN
+F 1 "BondPad" H 9200 5100 50  0000 C CNN
+F 2 "MicroD25_Bondpad:BondPad_B.Cu" H 8850 5050 50  0001 C CNN
+F 3 "" H 8850 5050 50  0001 C CNN
+	1    8850 5050
+	1    0    0    1   
+$EndComp
+$Comp
+L MicroD25_Bondpad:BondPad B29
+U 1 1 61690093
+P 8850 5200
+F 0 "B29" H 8950 5250 50  0000 C CNN
+F 1 "BondPad" H 9200 5250 50  0000 C CNN
+F 2 "MicroD25_Bondpad:BondPad_B.Cu" H 8850 5200 50  0001 C CNN
+F 3 "" H 8850 5200 50  0001 C CNN
+	1    8850 5200
+	1    0    0    1   
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H4
+U 1 1 6169A17E
+P 9400 4350
+F 0 "H4" H 9500 4399 50  0000 L CNN
+F 1 "MountingHole_Pad" H 9650 4400 50  0000 L CNN
+F 2 "MicroD25_Bondpad:ToGND" H 9400 4350 50  0001 C CNN
+F 3 "~" H 9400 4350 50  0001 C CNN
+	1    9400 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole_Pad H3
+U 1 1 6169B343
+P 9000 4350
+F 0 "H3" H 9100 4399 50  0000 L CNN
+F 1 "MountingHole_Pad" H 8200 4400 50  0000 L CNN
+F 2 "MicroD25_Bondpad:ToGND" H 9000 4350 50  0001 C CNN
+F 3 "~" H 9000 4350 50  0001 C CNN
+	1    9000 4350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 6169DD7E
+P 9200 4450
+F 0 "#PWR?" H 9200 4200 50  0001 C CNN
+F 1 "GND" H 9205 4277 50  0000 C CNN
+F 2 "" H 9200 4450 50  0001 C CNN
+F 3 "" H 9200 4450 50  0001 C CNN
+	1    9200 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 4450 9200 4450
+Connection ~ 9200 4450
+Wire Wire Line
+	9200 4450 9400 4450
 $EndSCHEMATC
