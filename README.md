@@ -20,6 +20,10 @@ Every project in the library is given a 2 to 4 alphabet code.
 
 ## 2DEG
 
+| Filename | Description |
+|---|---|
+| ``  |  |
+
 
 ## RC
 
@@ -28,6 +32,5 @@ Every project in the library is given a 2 to 4 alphabet code.
 
 | Filename | Description |
 |---|---|
-| `RS_MISC_TLMEtchTest_6x6_101821.GDS`  |
-| | |
-| | |
+| `RS_MISC_TLMEtchTest_6x6_101821.GDS`  | 300 um squares with spacing equal to 100, 200, 300, 400, 500, 600, 700 um. |
+
