@@ -20,9 +20,9 @@ Every project in the library is given a 2 to 4 alphabet code.
 
 ## 2DEG
 
-| Filename | Description |
-|---|---|
-| ``  |  |
+| Filename | Description | Preview |
+|---|---| --- |
+| `RS_2DEG_Hallbar+OhmicsTest_6x6_101821`  | Four hall bar mesas + ohmic contacts. In addition to the hall bars, there are also plenty of free ohmic contacts that can be used for testing. |  |
 
 
 ## RC
@@ -30,7 +30,11 @@ Every project in the library is given a 2 to 4 alphabet code.
 
 ## MISC
 
-| Filename | Description |
-|---|---|
-| `RS_MISC_TLMEtchTest_6x6_101821.GDS`  | 300 um squares with spacing equal to 100, 200, 300, 400, 500, 600, 700 um. |
+| Filename | Description | Preview |
+|---|---|---|
+| `RS_MISC_TLMEtchTest_6x6_101821`  | 300 um squares with spacing equal to 100, 200, 300, 400, 500, 600, 700 um.  | |
+| `RS_MISC_TLMTemplate_NA_101821`  | 2.2 mm long rectangular mesa, with square Ohmic contacts forming a grid. | |
+| `RS_MISC_EtchTest_5x5_101821`  | Etch test involving a variety of squares, circles, and test patterns.  | |
+| `RS_MISC_EtchTestFlattened_5x5_101821` | Identical to `RS_MISC_EtchTest_5x5_101821`, but all PCells are flattened and merged together | |
+| `RS_MISC_LineEtchTest_6x6_081821`  | Rows of vertical lines with varying thicknesses. Each line has a label indicating its thickness.  | |
 
