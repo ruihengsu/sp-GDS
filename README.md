@@ -8,7 +8,7 @@ All the files the library follows a specific naming convention consisting of 5 d
 |1| Start with your initials  | RS  |
 |2| The main project that the design is relevant for  | GaAs, RC, MISC,...  |
 |3| The name of the design   | EtchTest, Mesa, Hallbar, ...  |
-|4| The design dimension, in mm  | 6x7, 6x6, W4in, ...  |
+|4| The design dimension, in mm  | 6x7, 6x6, W4in, NA...  |
 |5| The date, in MMDDYY  | October 15, 2021 represented as 101521  |
 
 Every project in the library is given a 2 to 4 alphabet code. 
