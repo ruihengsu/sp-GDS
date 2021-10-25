@@ -23,6 +23,7 @@ from SingleOverlayCross import SingleOverlayCross
 from SingleOverlayAlignmentMark import SingleOverlayAlignmentMark
 
 from CrossArray import CrossArray
+from CrossArrayLabeled import CrossArrayLabeled
 from AlignMarkArray import AlignMarkArray
 from OverlayCrossArray import OverlayCrossArray
 from OverlayAlignMarkArray import OverlayAlignMarkArray
@@ -35,7 +36,7 @@ from EtchTest_Circ2 import EtchTest_Circ2
 from EtchTest_Circ3 import EtchTest_Circ3
 
 from LabelArray import LabelArray
-
+from LabelArray_VariablePitch import LabelArray_VariablePitch
 from SingleOhmicContact import SingleOhmicContact
 
 
@@ -45,6 +46,8 @@ from RCLineArray import RCLineArray
 from Meander import Meander
 from RCMeander import RCMeander
 from Serpentine import Serpentine
+
+from BoundingBox import BoundingBox
 
 class Ray(pya.Library):
     """
@@ -56,6 +59,8 @@ class Ray(pya.Library):
         # Set the description
         self.description = "Ray's PCell Library"
 
+        self.layout().register_pcell("BoundingBox", BoundingBox())
+        
         # Create the PCell declarations
         self.layout().register_pcell("Serpentine", Serpentine())
         self.layout().register_pcell("Meander", Meander())
@@ -70,7 +75,9 @@ class Ray(pya.Library):
         self.layout().register_pcell("SingleOverlayCross", SingleOverlayCross())
         
         self.layout().register_pcell("LabelArray", LabelArray())
+        self.layout().register_pcell("LabelArray_VariablePitch", LabelArray_VariablePitch())
         self.layout().register_pcell("CrossArray", CrossArray())
+        self.layout().register_pcell("CrossArrayLabeled", CrossArrayLabeled())
         self.layout().register_pcell("AlignMarkArray", AlignMarkArray())
         self.layout().register_pcell("OverlayCrossArray", OverlayCrossArray())
         self.layout().register_pcell("OverlayAlignMarkArray", OverlayAlignMarkArray())

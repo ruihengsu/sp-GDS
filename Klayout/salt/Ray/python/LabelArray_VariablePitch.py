@@ -1,7 +1,3 @@
-import pya 
-
-import pya
-import numpy as np
 import pya
 import numpy as np
 
@@ -47,24 +43,3 @@ class LabelArray_VariablePitch(pya.PCellDeclarationHelper):
 
             self.cell.shapes(self.l_layer).insert(label)
 
-
-class RayDev(pya.Library):
-    """
-    The library where we will put the PCell into 
-    """
-
-    def __init__(self):
-
-        # Set the description
-        self.description = "Ray De's PCell Library"
-
-        # Create the PCell declarations
-        
-        # self.layout().register_pcell("OverlayAlignMarkArray", OverlayAlignMarkArray())
-        
-        self.layout().register_pcell("LabelArray_VariablePitch", LabelArray_VariablePitch())
-        # Register us with the name "SerpentineLib".
-        self.register("RayDev")
-
-# Instantiate and register the library
-RayDev()

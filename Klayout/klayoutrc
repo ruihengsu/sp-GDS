@@ -26,7 +26,7 @@
  <context-color>auto</context-color>
  <context-dimming>50</context-dimming>
  <context-hollow>false</context-hollow>
- <current-lib-view/>
+ <current-lib-view>Ray</current-lib-view>
  <current-ruler-template>0</current-ruler-template>
  <custom-macro-paths>'C:/Users/ruihe/Documents/UBC_QDev_GDS/salt/Ray':pymacros</custom-macro-paths>
  <dbu-units>false</dbu-units>
@@ -52,17 +52,17 @@
  <edit-grid/>
  <edit-hier-copy-mode>-1</edit-hier-copy-mode>
  <edit-inst-angle>0</edit-inst-angle>
- <edit-inst-array>true</edit-inst-array>
- <edit-inst-cell-name>TEXT</edit-inst-cell-name>
- <edit-inst-column_x>0</edit-inst-column_x>
- <edit-inst-column_y>-1300</edit-inst-column_y>
+ <edit-inst-array>false</edit-inst-array>
+ <edit-inst-cell-name>CrossArrayLabeled</edit-inst-cell-name>
+ <edit-inst-column_x>3000</edit-inst-column_x>
+ <edit-inst-column_y>0</edit-inst-column_y>
  <edit-inst-columns>2</edit-inst-columns>
- <edit-inst-lib-name>Basic</edit-inst-lib-name>
+ <edit-inst-lib-name>Ray</edit-inst-lib-name>
  <edit-inst-mirror>false</edit-inst-mirror>
- <edit-inst-pcell-parameters>!bias:##0;cspacing:##0;eff_ch:##80;eff_cw:##60;eff_dr:##5;eff_lw:##10;font:#0;font_name:'std_font';inverse:false;layer:[layer:1/0];lspacing:##0;mag:##100;text:'3-24-10.2 C24';</edit-inst-pcell-parameters>
+ <edit-inst-pcell-parameters>!</edit-inst-pcell-parameters>
  <edit-inst-place-origin>false</edit-inst-place-origin>
- <edit-inst-row_x>3000</edit-inst-row_x>
- <edit-inst-row_y>0</edit-inst-row_y>
+ <edit-inst-row_x>0</edit-inst-row_x>
+ <edit-inst-row_y>1000</edit-inst-row_y>
  <edit-inst-rows>2</edit-inst-rows>
  <edit-inst-scale>1</edit-inst-scale>
  <edit-max-shapes-of-instances>1000</edit-max-shapes-of-instances>
@@ -72,7 +72,9 @@
  <edit-path-ext-var-begin>0.0</edit-path-ext-var-begin>
  <edit-path-ext-var-end>0.0</edit-path-ext-var-end>
  <edit-path-width>0.1</edit-path-width>
- <edit-recent-inst-param>Basic,TEXT,'0',false,'1',true,'2','3000','0','2','0','-1300','!bias:##0;cspacing:##0;eff_ch:##80;eff_cw:##60;eff_dr:##5;eff_lw:##10;font:#0;font_name:\'std_font\';inverse:false;layer:[layer:1/0];lspacing:##0;mag:##100;text:\'3-24-10.2 C24\';',</edit-recent-inst-param>
+ <edit-recent-inst-param>Ray,CrossArrayLabeled,'0',false,'1',false,'2','0','1000','2','3000','0','!',;Ray,CrossArray,'0',false,'1',false,'2','0','1000','2','3000','0','!',;Ray,OverlayAlignMarkArray,'0',false,'1',false,'2','0','1000','2','3000','0','!',;Ray,OverlayCrossArray,'0',false,'1',false,'2','0','1000','2','3000','0','!',;Ray,SingleOhmicContact,'0',false,'1',false,'2','0','1000','2','3000','0','!',;'',Mesa_Ohmics,'0',false,'1',false,'2','0','1000','2','3000','0','',;'',Mesa_Gates,'0',false,'1',false,'2','0','1000','2','3000','0','',;'',Mesa,'0',false,'1',false,'2','0','1000','2','3000','0','',;'',MatthiasCOMBO,'0',false,'1',false,'2','0','1000','2','3000','0','',;'',MicroOhmics,'0',false,'1',false,'2','0','1000','2','3000','0','',;'',MatthiasCell_1,'0',false,'1',false,'2','0','1000','2','3000','0','',;'',MatthiasCell,'0',false,'1',false,'2','0','1000','2','3000','0','',;Ray,AlignMarkArray,'0',false,'1',false,'2','0','1000','2','3000','0','!',;Basic,TEXT,'0',false,'1',false,'2','0','1000','2','3000','0','!',;'',TLM,'0',false,'1',false,'2','0','1000','2','3000','0','',;'',EtchBox,'0',false,'1',false,'2','0','1000','2','3000','0','',;'',EtchStrip,'0',false,'1',false,'2','0','1000','2','3000','0','',;Ray,EtchTest_Box3,'0',false,'1',false,'2','0','1000','2','3000','0','!',;Ray,BoundingBox,'0',false,'1',false,'2','0','1000','2','3000','0','!',;Basic,CIRCLE,'0',false,'1',false,'2','0','1000','2','3000','0','!actual_radius:##10000;handle:[dpoint:-10000,0];layer:[layer:3/0];npoints:#64;radius:##10000;',;Ray,RCLine,'0',false,'1',false,'2','0','1000','2','3000','0','!l:[layer:2/0];line_L:##500;line_W:##50;pad_L:##300;pad_W:##300;text_distance:##60;text_scale:##0.02;',;Ray,RCLine,'0',false,'1',false,'2','0','1000','2','3000','0','!',;'','30Line_50000by200','0',false,'1',false,'2','0','1000','2','3000','0','',;'',Dielectric,'0',false,'1',false,'2','0','1000','2','3000','0','',;'','4in Outline','0',false,'1',false,'2','0','1000','2','3000','0','',;Basic,CIRCLE,'0',false,'1',false,'2','0','1000','2','3000','0','!actual_radius:##4000;handle:[dpoint:-4000,0];layer:[layer:1/0];npoints:#64;radius:##4000;',;Basic,CIRCLE,'0',false,'1',false,'2','0','1000','2','3000','0','!',;Ray,CrossArray,'0',false,'1',false,'2','0','1000','2','3000','0','!clength:##100;col_step:##1100;columns:#l2;cthick:##5;cwidth:##100;l:[layer:1/0];row_step:##1100;rows:#l2;',;Ray,OverlayAlignMarkArray,'0',false,'1',false,'2','0','1000','2','3000','0','!clength:##80;col_step:##600;columns:#l5;cthick:##5;cwidth:##80;l:[layer:1/0];length:##100;oN:#l2;olength:##40;opitch:##15;othick:##5;oxn:true;oxp:true;oyn:true;oyp:true;row_step:##600;rows:#l5;text_distance:##75;text_scale:##0.04;width:##100;',;Basic,TEXT,'0',false,'1',true,'2','0','1000','2','3000','0','!bias:##0;cspacing:##0;eff_ch:##80;eff_cw:##60;eff_dr:##5;eff_lw:##10;font:#0;font_name:\'std_font\';inverse:false;layer:[layer:1/0];lspacing:##0;mag:##100;text:\'RS Hallbar Rev2 Oct 2021\';',;'',MatthiasCell,'0',false,'1',false,'1','0','0','2','3000','0','',;'',MatthiasCell_1,'0',false,'1',false,'1','0','0','2','3000','0','',;'',MatthiasCell,'0',false,'1',true,'1','0','0','2','3000','0','',;'',MatthiasCell_1,'0',false,'1',true,'2','0','3000','1','0','0','',;'',MatthiasCell_1,'0',false,'1',false,'2','3000','0','2','0','3000','',;'',MatthiasCell,'0',false,'1',false,'2','3000','0','2','0','3000','',;Ray,LabelArray_VariablePitch,'0',false,'1',false,'2','3000','0','2','0','3000','!',;RayDev,LabelArray_VariablePitch,'0',false,'1',false,'2','3000','0','2','0','3000','!',;Ray,LabelArray,'0',false,'1',false,'2','3000','0','2','0','3000','!',;'','TLM L','0',false,'1',false,'2','3000','0','2','0','3000','',;'',TLM,'0',false,'1',false,'2','3000','0','2','0','3000','',;Ray,SingleOhmicContact,'0',false,'1',false,'2','3000','0','2','0','3000','!',;'',GaAs_3Prongs,'0',false,'1',false,'2','3000','0','2','0','3000','',;'',Subcell,'0',false,'1',true,'2','3000','0','2','0','3000','',;Ray,OverlayCrossArray,'0',false,'1',true,'2','3000','0','2','0','-1300','!',;Ray,OverlayAlignMarkArray,'0',false,'1',true,'2','3000','0','2','0','-1300','!',;Ray,AlignMarkArray,'0',false,'1',true,'2','3000','0','2','0','-1300','!',;Ray,CrossArray,'0',false,'1',true,'2','3000','0','2','0','-1300','!',;Basic,TEXT,'0',false,'1',true,'2','3000','0','2','0','-1300','!bias:##0;cspacing:##0;eff_ch:##80;eff_cw:##60;eff_dr:##5;eff_lw:##10;font:#0;font_name:\'std_font\';inverse:false;layer:[layer:1/0];lspacing:##0;mag:##100;text:\'3-24-10.2 C24\';',</edit-recent-inst-param>
+ <edit-recent-path-param>'1/0','0.1',flush,'0.0','0.0',</edit-recent-path-param>
+ <edit-recent-shape-param>'2/0',;'1/0',;'3/0',</edit-recent-shape-param>
  <edit-show-shapes-of-instances>true</edit-show-shapes-of-instances>
  <edit-snap-to-objects>false</edit-snap-to-objects>
  <edit-text-halign>left</edit-text-halign>
@@ -136,28 +138,28 @@
  <layout-file-watcher-enabled>true</layout-file-watcher-enabled>
  <lef-import-spec/>
  <line-style-palette>0 1 2 3</line-style-palette>
- <macro-editor-active-macro>C:/Users/ruihe/Documents/UBC_QDev_GDS/salt/Ray/pymacros/Ray.lym</macro-editor-active-macro>
+ <macro-editor-active-macro>C:/Users/labuser/KLayout/salt/Ray/python/CrossArrayLabeled.py</macro-editor-active-macro>
  <macro-editor-console-interpreter>python</macro-editor-console-interpreter>
  <macro-editor-console-mru/>
- <macro-editor-current-macro>C:/Users/ruihe/Documents/UBC_QDev_GDS/salt/Ray/pymacros/Ray.lym</macro-editor-current-macro>
+ <macro-editor-current-macro>C:/Users/labuser/KLayout/salt/Ray/python/CrossArrayLabeled.py</macro-editor-current-macro>
  <macro-editor-debugging-enabled>true</macro-editor-debugging-enabled>
  <macro-editor-file-watcher-enabled>true</macro-editor-file-watcher-enabled>
  <macro-editor-font-family>Courier New</macro-editor-font-family>
  <macro-editor-font-size>8</macro-editor-font-size>
  <macro-editor-ignore-exception-list/>
  <macro-editor-indent>2</macro-editor-indent>
- <macro-editor-open-macros>'C:/Users/ruihe/Documents/UBC_QDev_GDS/salt/Ray/pymacros/Ray.lym'</macro-editor-open-macros>
+ <macro-editor-open-macros>'C:/Users/labuser/KLayout/salt/Ray/pymacros/Ray.lym';'C:/Users/labuser/KLayout/salt/Ray/python/CrossArrayLabeled.py';'C:/Users/labuser/KLayout/salt/Ray/python/AlignMarkArray.py';'C:/Users/labuser/KLayout/salt/Ray/python/CrossArray.py'</macro-editor-open-macros>
  <macro-editor-save-all-on-run>false</macro-editor-save-all-on-run>
  <macro-editor-stop-on-exception>true</macro-editor-stop-on-exception>
  <macro-editor-styles>basic:'Alert'=(bold:true,color:'#bf0303',background:'#f7e7e7'),'Attribute'=(color:'#0057ae'),'Base-N Integer'=(color:'#b07e00'),'Built-in'=(bold:true,color:'#644a9b'),'Character'=(color:'#ff80e0'),'Comment'=(italic:true,color:'#888786'),'Control Flow'=(bold:true,color:'#1f1c1b'),'Data Type'=(color:'#0057ae'),'Decimal/Value'=(color:'#b07e00'),'Error'=(color:'#bf0303'),'Extension'=(color:'#0095ff'),'Floating Point'=(color:'#b07e00'),'Function'=(color:'#442886'),'Import'=(color:'#ff5500'),'Keyword'=(bold:true),'Normal'=(),'Operator'=(color:'#1f1c1b'),'Others'=(color:'#006e26'),'Preprocessor'=(color:'#006e28'),'Region Marker'=(color:'#0057ae',background:'#e1eaf8'),'Special Character'=(color:'#3daee9'),'Special String'=(color:'#ff5500'),'String'=(color:'#bf0303'),'Variable'=(color:'#0057ae'),'Verbatim String'=(color:'#bf0303');ruby:'Access Control'=(color:'#0000ff'),'Attribute Definition'=(),'Bin'=(),'Blockcomment'=(),'Char'=(),'Class Variable'=(),'Command'=(color:'#aa3000'),'Comment'=(),'Constant'=(),'Constant Value'=(color:'#bb1188'),'Data'=(),'Dec'=(),'Default globals'=(bold:true,color:'#c00000'),'Definition'=(),'Delimiter'=(color:'#ff9fec'),'Error'=(),'Expression'=(),'Float'=(),'GDL input'=(),'Global Constant'=(bold:true,color:'#bb1188'),'Global Variable'=(color:'#c00000'),'Here Document'=(),'Hex'=(),'Instance Variable'=(),'Kernel methods'=(color:'#000080'),'Keyword'=(),'Member'=(),'Message'=(color:'#4000a7'),'Module mixin methods'=(color:'#000080'),'Normal Text'=(),'Octal'=(),'Operator'=(color:'#ff9fec'),'Pseudo variable'=(),'RDoc Value'=(),'Raw String'=(color:'#dd4a4a'),'Region Marker'=(color:'#0000ff'),'Regular Expression'=(color:'#4a5704'),'String'=(),'Substitution'=(),'Symbol'=(color:'#d40000');python:'Builtin Function'=(),'ClassNames'=(italic:false,bold:true,color:'#fcad3d'),'Comment'=(),'Complex'=(),'Decorator'=(),'Definition Keyword'=(),'Error'=(),'Exceptions'=(),'Extensions'=(),'F-String'=(),'Float'=(),'Flow Control Keyword'=(),'Hex'=(),'Import'=(),'Int'=(),'Normal Text'=(),'Octal'=(),'Operator'=(),'Operator Keyword'=(),'Overloaders'=(),'Raw F-String'=(),'Raw String'=(),'Special Variable'=(),'String'=(),'String Char'=(),'String Substitution'=();</macro-editor-styles>
  <macro-editor-tab-width>8</macro-editor-tab-width>
  <macro-editor-watch-expressions/>
- <macro-editor-window-state>MacroEditorDialog="AdnQywADAAD/////////+AAAB4AAAAQQAAAByAAAAIsAAAW3AAADgwAAAAACAAAAB4AAAAAAAAAAFwAAB38AAAQP";splitter="AAAA/wAAAAEAAAADAAAANwAAANMAAADwAf////8BAAAAAgA=";splitter_2="AAAA/wAAAAEAAAADAAABAAAAAQAAAAEAAf////8BAAAAAQA=";watchList="AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAnUAAAACAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAACAAAAZAAAAAEAAAAAAAACEQAAAAEAAAAAAAAD6AAAAABk";variableList="AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAnQAAAACAQAAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAACAAAAZAAAAAEAAAAAAAACEAAAAAEAAAAAAAAD6AAAAABk";mainHSplitter="AAAA/wAAAAEAAAACAAAA3wAAAysB/////wEAAAABAA==";splitter_7="AAAA/wAAAAEAAAABAAAABgD/////AQAAAAEA";lvs_tree="AAAA/wAAAAAAAAABAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAGQAAAABAQEAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAABAAAAZAAAAAEAAAAAAAAD6AAAAABk";drc_tree="AAAA/wAAAAAAAAABAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAGQAAAABAQEAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAABAAAAZAAAAAEAAAAAAAAD6AAAAABk";macros_tree="AAAA/wAAAAAAAAABAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAGQAAAABAQEAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAABAAAAZAAAAAEAAAAAAAAD6AAAAABk";pymacros_tree="AAAA/wAAAAAAAAABAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAANcAAAABAQEAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAABAAAA1wAAAAEAAAAAAAAD6AAAAABk";</macro-editor-window-state>
+ <macro-editor-window-state>MacroEditorDialog="AdnQywADAAD/////////9QAADwAAAAg0AAAAAAAAACIAAA7/AAAIMwAAAAACAAAADwAAAAAAAAAAIgAADv8AAAgz";splitter="AAAA/wAAAAEAAAADAAAFFwAAAd8AAADwAf////8BAAAAAgA=";splitter_2="AAAA/wAAAAEAAAADAAABAAAAAQAAAAEAAf////8BAAAAAQA=";watchList="AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAnMAAAACAQAAAQAAAAAAAAAAAAAAAJb/////AAAAgQAAAAAAAAACAAAAZAAAAAEAAAAAAAACDwAAAAEAAAAAAAAD6AAAAABk";variableList="AAAA/wAAAAAAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAnIAAAACAQAAAQAAAAAAAAAAAAAAAJb/////AAAAgQAAAAAAAAACAAAAZAAAAAEAAAAAAAACDgAAAAEAAAAAAAAD6AAAAABk";mainHSplitter="AAAA/wAAAAEAAAACAAACGgAADM0B/////wEAAAABAA==";splitter_7="AAAA/wAAAAEAAAABAAAAlAD/////AQAAAAEA";lvs_tree="AAAA/wAAAAAAAAABAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAGQAAAABAQEAAQAAAAAAAAAAAAAAAJb/////AAAAgQAAAAAAAAABAAAAZAAAAAEAAAAAAAAD6AAAAABk";drc_tree="AAAA/wAAAAAAAAABAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAGQAAAABAQEAAQAAAAAAAAAAAAAAAJb/////AAAAgQAAAAAAAAABAAAAZAAAAAEAAAAAAAAD6AAAAABk";macros_tree="AAAA/wAAAAAAAAABAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAhIAAAABAQEAAQAAAAAAAAAAAAAAAJb/////AAAAgQAAAAAAAAABAAACEgAAAAEAAAAAAAAD6AAAAABk";pymacros_tree="AAAA/wAAAAAAAAABAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAhIAAAABAQEAAQAAAAAAAAAAAAAAAJb/////AAAAgQAAAAAAAAABAAACEgAAAAEAAAAAAAAD6AAAAABk";</macro-editor-window-state>
  <markers-visible>true</markers-visible>
  <menu-items-hidden>'@@navigator_menu.navigator_main_menu.navigator_all_hier_levels':false;'@@navigator_menu.navigator_main_menu.navigator_freeze':false;'@@navigator_menu.navigator_main_menu.navigator_show_images':false;'@bookmarks_context_menu.follow_selection':false;'@bookmarks_context_menu.load_bookmarks':false;'@bookmarks_context_menu.manage_bookmarks':false;'@bookmarks_context_menu.save_bookmarks':false;'@hcp_context_menu.cell_user_properties':false;'@hcp_context_menu.flat_mode':false;'@hcp_context_menu.hide_cell':false;'@hcp_context_menu.open_current':false;'@hcp_context_menu.save_cell_as':false;'@hcp_context_menu.show_all':false;'@hcp_context_menu.show_as_top':false;'@hcp_context_menu.show_cell':false;'@hcp_context_menu.sorting.by_area':false;'@hcp_context_menu.sorting.by_area_reverse':false;'@hcp_context_menu.sorting.by_name':false;'@hcp_context_menu.split_mode':false;'@lcp_context_menu.add_others':false;'@lcp_context_menu.clean_up':false;'@lcp_context_menu.copy':false;'@lcp_context_menu.cut':false;'@lcp_context_menu.del':false;'@lcp_context_menu.group':false;'@lcp_context_menu.hide':false;'@lcp_context_menu.hide_all':false;'@lcp_context_menu.hide_empty_layers':false;'@lcp_context_menu.insert':false;'@lcp_context_menu.invvalid':false;'@lcp_context_menu.paste':false;'@lcp_context_menu.regroup_menu.flatten':false;'@lcp_context_menu.regroup_menu.grp_d':false;'@lcp_context_menu.regroup_menu.grp_i':false;'@lcp_context_menu.regroup_menu.grp_l':false;'@lcp_context_menu.rename':false;'@lcp_context_menu.select_all':false;'@lcp_context_menu.select_source':false;'@lcp_context_menu.show':false;'@lcp_context_menu.show_all':false;'@lcp_context_menu.show_only':false;'@lcp_context_menu.sort_menu.sort_dli':false;'@lcp_context_menu.sort_menu.sort_idl':false;'@lcp_context_menu.sort_menu.sort_ild':false;'@lcp_context_menu.sort_menu.sort_ldi':false;'@lcp_context_menu.sort_menu.sort_name':false;'@lcp_context_menu.tab_menu.new_tab':false;'@lcp_context_menu.tab_menu.remove_tab':false;'@lcp_context_menu.tab_menu.rename_tab':false;'@lcp_context_menu.test_shapes_in_view':false;'@lcp_context_menu.ungroup':false;'@lcp_context_menu.valid':false;'@lcp_tabs_context_menu.new_tab':false;'@lcp_tabs_context_menu.remove_tab':false;'@lcp_tabs_context_menu.rename_tab':false;'@secrets.duplicate_interactive':false;'@secrets.paste_interactive':false;'@secrets.sel_move_interactive':false;'@secrets.select_next_item':false;'@secrets.select_next_item_add':false;'@toolbar.move':false;'@toolbar.next_display_state':false;'@toolbar.prev_display_state':false;'@toolbar.ruler':false;'@toolbar.select':false;'@toolbar.technology_selector':false;bookmark_menu:false;bookmark_menu.bookmark_view:false;bookmark_menu.goto_bookmark_menu:false;bookmark_menu.load_bookmarks:false;bookmark_menu.manage_bookmarks:false;bookmark_menu.open_recent_menu_bookmarks:false;bookmark_menu.save_bookmarks:false;edit_menu:false;edit_menu.add_image:false;edit_menu.cancel:false;edit_menu.clear_all_rulers:false;edit_menu.configure_rulers:false;edit_menu.copy:false;edit_menu.cut:false;edit_menu.delete:false;edit_menu.duplicate:false;edit_menu.image_menu:false;edit_menu.image_menu.bring_to_back:false;edit_menu.image_menu.bring_to_front:false;edit_menu.image_menu.clear_all_images:false;edit_menu.mode_menu:false;edit_menu.mode_menu.move:false;edit_menu.mode_menu.ruler:false;edit_menu.mode_menu.select:false;edit_menu.paste:false;edit_menu.redo:false;edit_menu.search_replace_viewer:false;edit_menu.select_menu:false;edit_menu.select_menu.disable_all:false;edit_menu.select_menu.enable_all:false;edit_menu.select_menu.pi_enable_12:false;edit_menu.select_menu.pi_enable_13:false;edit_menu.select_menu.pi_enable_14:false;edit_menu.select_menu.pi_enable_15:false;edit_menu.select_menu.pi_enable_16:false;edit_menu.select_menu.pi_enable_17:false;edit_menu.select_menu.pi_enable_18:false;edit_menu.select_menu.pi_enable_20:false;edit_menu.select_menu.select_all:false;edit_menu.select_menu.unselect_all:false;edit_menu.selection_menu:false;edit_menu.selection_menu.sel_flip_x:false;edit_menu.selection_menu.sel_flip_y:false;edit_menu.selection_menu.sel_free_rot:false;edit_menu.selection_menu.sel_move:false;edit_menu.selection_menu.sel_move_to:false;edit_menu.selection_menu.sel_rot_ccw:false;edit_menu.selection_menu.sel_rot_cw:false;edit_menu.selection_menu.sel_scale:false;edit_menu.show_properties:false;edit_menu.undo:false;file_menu:false;file_menu.clone:false;file_menu.close:false;file_menu.close_all:false;file_menu.exit:false;file_menu.import_menu:false;file_menu.import_menu.import_def:false;file_menu.import_menu.import_gerber_menu:false;file_menu.import_menu.import_gerber_menu.import_gerber_new:false;file_menu.import_menu.import_gerber_menu.import_gerber_new_free:false;file_menu.import_menu.import_gerber_menu.import_gerber_open:false;file_menu.import_menu.import_gerber_menu.import_gerber_recent:false;file_menu.import_menu.import_lef:false;file_menu.import_menu.import_stream:false;file_menu.layout_props:false;file_menu.layout_stats:false;file_menu.load_layer_props:false;file_menu.open:false;file_menu.open_new_panel:false;file_menu.open_recent_menu:false;file_menu.open_recent_menu_layer_props:false;file_menu.open_recent_menu_sessions:false;file_menu.open_same_panel:false;file_menu.print:false;file_menu.pull_in:false;file_menu.reader_options:false;file_menu.reload:false;file_menu.restore_session:false;file_menu.save:false;file_menu.save_all:false;file_menu.save_as:false;file_menu.save_layer_props:false;file_menu.save_session:false;file_menu.screenshot:false;file_menu.setup:false;file_menu.view_log:false;file_menu.writer_options:false;help_menu:false;help_menu.about:false;help_menu.about_qt:false;help_menu.assistant:false;help_menu.show_all_tips:false;macros_menu:false;macros_menu.macro_development:false;tools_menu:false;tools_menu.browse_instances:false;tools_menu.browse_markers:false;tools_menu.browse_netlists:false;tools_menu.browse_shapes:false;tools_menu.d25_view:false;tools_menu.diff_tool:false;tools_menu.drc:false;tools_menu.drc.edit_script:false;tools_menu.drc.new_script:false;tools_menu.edit_layer_stack:false;tools_menu.lvs:false;tools_menu.lvs.edit_script:false;tools_menu.lvs.new_script:false;tools_menu.net_trace:false;tools_menu.packages:false;tools_menu.shapes_to_markers:false;tools_menu.shapes_to_markers.scan_layers:false;tools_menu.shapes_to_markers.scan_layers_flat:false;tools_menu.technologies:false;tools_menu.trace_all_nets_menu:false;tools_menu.trace_all_nets_menu.trace_all_nets:false;tools_menu.trace_all_nets_menu.trace_all_nets_flat:false;tools_menu.xor_tool:false;view_menu:false;view_menu.default_grid:false;view_menu.default_grid.default_grid_1:false;view_menu.default_grid.default_grid_2:false;view_menu.default_grid.default_grid_3:false;view_menu.mouse_tracking:false;view_menu.no_stipples:false;view_menu.reset_window_state:false;view_menu.show_bookmarks_view:false;view_menu.show_cell_boxes:false;view_menu.show_grid:false;view_menu.show_hierarchy_panel:false;view_menu.show_images:false;view_menu.show_layer_panel:false;view_menu.show_layer_toolbox:false;view_menu.show_libraries_view:false;view_menu.show_markers:false;view_menu.show_navigator:false;view_menu.show_texts:false;view_menu.show_toolbar:false;view_menu.synchronized_views:false;view_menu.transient_selection:false;zoom_menu:false;zoom_menu.ascend:false;zoom_menu.dec_max_hier:false;zoom_menu.descend:false;zoom_menu.global_trans:false;zoom_menu.global_trans.m0:false;zoom_menu.global_trans.m135:false;zoom_menu.global_trans.m45:false;zoom_menu.global_trans.m90:false;zoom_menu.global_trans.r0:false;zoom_menu.global_trans.r180:false;zoom_menu.global_trans.r270:false;zoom_menu.global_trans.r90:false;zoom_menu.goto_position:false;zoom_menu.inc_max_hier:false;zoom_menu.max_hier:false;zoom_menu.max_hier_0:false;zoom_menu.max_hier_1:false;zoom_menu.next_display_state:false;zoom_menu.prev_display_state:false;zoom_menu.redraw:false;zoom_menu.select_cell:false;zoom_menu.select_current_cell:false;zoom_menu.zoom_fit:false;zoom_menu.zoom_fit_sel:false;zoom_menu.zoom_in:false;zoom_menu.zoom_out:false;'@hcp_context_menu.copy':false;'@hcp_context_menu.cut':false;'@hcp_context_menu.delete_cell':false;'@hcp_context_menu.flatten_cell':false;'@hcp_context_menu.new_cell':false;'@hcp_context_menu.paste':false;'@hcp_context_menu.rename_cell':false;'@hcp_context_menu.replace_cell':false;'@toolbar.box':false;'@toolbar.combine_mode':false;'@toolbar.instance':false;'@toolbar.partial':false;'@toolbar.path':false;'@toolbar.polygon':false;'@toolbar.text':false;edit_menu.cell_menu:false;edit_menu.cell_menu.adjust_cell_origin:false;edit_menu.cell_menu.convert_cell_to_static:false;edit_menu.cell_menu.delete_cell:false;edit_menu.cell_menu.flatten_cell:false;edit_menu.cell_menu.new_cell:false;edit_menu.cell_menu.rename_cell:false;edit_menu.cell_menu.replace_cell:false;edit_menu.cell_menu.user_properties:false;edit_menu.edit_options:false;edit_menu.layer_menu:false;edit_menu.layer_menu.boolean:false;edit_menu.layer_menu.clear_layer:false;edit_menu.layer_menu.copy_layer:false;edit_menu.layer_menu.delete_layer:false;edit_menu.layer_menu.edit_layer:false;edit_menu.layer_menu.merge:false;edit_menu.layer_menu.new_layer:false;edit_menu.layer_menu.size:false;edit_menu.layout_menu:false;edit_menu.layout_menu.lay_convert_to_static:false;edit_menu.layout_menu.lay_flip_x:false;edit_menu.layout_menu.lay_flip_y:false;edit_menu.layout_menu.lay_free_rot:false;edit_menu.layout_menu.lay_move:false;edit_menu.layout_menu.lay_rot_ccw:false;edit_menu.layout_menu.lay_rot_cw:false;edit_menu.layout_menu.lay_scale:false;edit_menu.mode_menu.box:false;edit_menu.mode_menu.instance:false;edit_menu.mode_menu.partial:false;edit_menu.mode_menu.path:false;edit_menu.mode_menu.polygon:false;edit_menu.mode_menu.text:false;edit_menu.search_replace_editor:false;edit_menu.selection_menu.align:false;edit_menu.selection_menu.change_layer:false;edit_menu.selection_menu.convert_to_cell:false;edit_menu.selection_menu.convert_to_pcell:false;edit_menu.selection_menu.difference:false;edit_menu.selection_menu.distribute:false;edit_menu.selection_menu.flatten_insts:false;edit_menu.selection_menu.intersection:false;edit_menu.selection_menu.make_array:false;edit_menu.selection_menu.make_cell:false;edit_menu.selection_menu.make_cell_variants:false;edit_menu.selection_menu.move_hier_up:false;edit_menu.selection_menu.resolve_arefs:false;edit_menu.selection_menu.round_corners:false;edit_menu.selection_menu.separate:false;edit_menu.selection_menu.size:false;edit_menu.selection_menu.tap:false;edit_menu.selection_menu.union:false;edit_menu.utils_menu:false;edit_menu.utils_menu.clip_tool:false;edit_menu.utils_menu.fill_tool:false;file_menu.new_layout:false;file_menu.new_panel:false;file_menu.open_recent_menu.open_recent_1:false;file_menu.open_recent_menu.open_recent_2:false;file_menu.open_recent_menu.open_recent_3:false;file_menu.open_recent_menu.open_recent_4:false;file_menu.open_recent_menu.open_recent_5:false;file_menu.open_recent_menu.open_recent_6:false;file_menu.open_recent_menu_layer_props.open_recent_1:false;view_menu.edit_top_level_selection:false</menu-items-hidden>
  <min-inst-label-size>16</min-inst-label-size>
  <mouse-wheel-mode>0</mouse-wheel-mode>
- <mru>'C:\\Users\\ruihe\\Downloads\\RS_MK_Hallbar_6x7mm2.GDS' 'C:\\Users\\ruihe\\Documents\\UBC_QDev_GDS\\GaAs\\RS_MK_Hallbar_6x7mm2.GDS' 'C:\\Users\\ruihe\\Documents\\UBC_QDev_GDS\\RC Filter\\RS_RC_Test_Wafer.GDS' 'C:\\Users\\ruihe\\Downloads\\201222AZ5214_MLA_HRrect.dxf' 'C:\\Users\\ruihe\\Documents\\UBC_QDev_GDS\\GaAs\\July 22 2021 With Corner Test Mesas\\RS_mesa_ohmics_with_test_mesas.GDS' 'C:\\Users\\ruihe\\Documents\\UBC_QDev_GDS\\RC Filter\\RS_RC_Oct6.GDS'</mru>
+ <mru>'C:\\Users\\labuser\\Documents\\Ruiheng Su\\UBC_QDev_GDS\\Projects\\2DEG\\October 18 2021\\RS_Mesa_Ohmics_2x2.GDS' 'C:\\Users\\labuser\\Documents\\Ruiheng Su\\UBC_QDev_GDS\\Projects\\MISC\\RS_MISC_TLMEtchTest_6x6_101821.GDS' 'C:\\Users\\labuser\\Documents\\Ruiheng Su\\UBC_QDev_GDS\\Projects\\MISC\\RS_MISC_TLMEtchTestOhmic_6x6_101821.GDS' 'C:\\Users\\labuser\\Documents\\Ruiheng Su\\UBC_QDev_GDS\\Projects\\MISC\\RS_MISC_LineEtchTest_6x6_081821.GDS' 'C:\\Users\\labuser\\Documents\\Ruiheng Su\\UBC_QDev_GDS\\Projects\\RC\\RS_RC_Oct6.GDS' 'C:\\Users\\labuser\\Documents\\Ruiheng Su\\UBC_QDev_GDS\\Projects\\RC\\p-Si Aluminum Contact Testing\\RS_Al_pSi_Contact_Test.GDS' 'C:\\Users\\labuser\\Documents\\Ruiheng Su\\UBC_QDev_GDS\\Projects\\2DEG\\Mesa_Gate_Ohmic.GDS' 'C:\\Users\\labuser\\Documents\\Ruiheng Su\\UBC_QDev_GDS\\Projects\\2DEG\\October 18 2021\\RS_Mesa_Ohmics_3x3.GDS' 'C:\\Users\\labuser\\Documents\\Ruiheng Su\\UBC_QDev_GDS\\Projects\\2DEG\\RS_2DEG_Hallbar+OhmicsTest_6x6_101821.GDS' 'C:\\Users\\labuser\\Downloads\\RS_2DEG_MesaOhmicGate_6x6_102021.GDS' 'C:\\Users\\labuser\\Documents\\Ruiheng Su\\UBC_QDev_GDS\\Projects\\2DEG\\August 1 2021 With Numbered Alignment Marks\\RS_Mesa_Ohmics_3x2.GDS' 'C:\\Users\\labuser\\Documents\\RS_2DEG_AlignMesaOhmicGate_6x6_102121.GDS' 'C:\\Users\\labuser\\Documents\\Ruiheng Su\\UBC_QDev_GDS\\Projects\\2DEG\\RS_2DEG_HallbarOhmicsTest_6x6_101821.GDS' 'C:\\Users\\labuser\\Documents\\Ruiheng Su\\UBC_QDev_GDS\\Projects\\2DEG\\July 22 2021 With Corner Test Mesas\\RS_mesa_ohmics_with_test_mesas.GDS' 'C:\\Users\\labuser\\Documents\\Ruiheng Su\\UBC_QDev_GDS\\Projects\\2DEG\\RS_2DEG_MesaOhmicGateLongerMarks_6x6_102021.GDS' 'C:\\Users\\labuser\\Documents\\Ruiheng Su\\UBC_QDev_GDS\\Projects\\2DEG\\RS_2DEG_MesaOhmicGate_6x6_102021.GDS'</mru>
  <mru-bookmarks/>
  <mru-layer-properties>'C:\\Users\\ruihe\\Documents\\UBC_QDev_GDS\\RC Filter\\RS_RC_Test_Wafer.lyp'</mru-layer-properties>
  <mru-sessions/>
@@ -230,7 +232,133 @@
  <sr-window-state/>
  <stipple-offset>true</stipple-offset>
  <stipple-palette>0 1 2 3 4 5[1] 6 7 8 9[0] 10 11 12 13 14 15</stipple-palette>
- <stream-import-spec2/>
+ <stream-import-spec2>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;stream-import-data&gt;
+ &lt;files&gt;
+  &lt;file&gt;C:/Users/labuser/Documents/Ruiheng Su/UBC_QDev_GDS/Projects/2DEG/Mesa Gates.GDS&lt;/file&gt;
+  &lt;file&gt;C:/Users/labuser/Documents/Ruiheng Su/UBC_QDev_GDS/Projects/2DEG/Mesa Ohmics.GDS&lt;/file&gt;
+  &lt;file&gt;C:/Users/labuser/Documents/Ruiheng Su/UBC_QDev_GDS/Projects/2DEG/Mesa.GDS&lt;/file&gt;
+ &lt;/files&gt;
+ &lt;cell-name/&gt;
+ &lt;layer-offset/&gt;
+ &lt;layer-mode&gt;original&lt;/layer-mode&gt;
+ &lt;import-mode&gt;extra&lt;/import-mode&gt;
+ &lt;reference-points&gt;
+ &lt;/reference-points&gt;
+ &lt;explicit-trans&gt;r0 *1 0,0&lt;/explicit-trans&gt;
+ &lt;options&gt;
+  &lt;gds2&gt;
+   &lt;box-mode&gt;1&lt;/box-mode&gt;
+   &lt;allow-big-records&gt;true&lt;/allow-big-records&gt;
+   &lt;allow-multi-xy-records&gt;true&lt;/allow-multi-xy-records&gt;
+  &lt;/gds2&gt;
+  &lt;common&gt;
+   &lt;create-other-layers&gt;true&lt;/create-other-layers&gt;
+   &lt;layer-map&gt;layer_map()&lt;/layer-map&gt;
+   &lt;enable-properties&gt;true&lt;/enable-properties&gt;
+   &lt;enable-text-objects&gt;true&lt;/enable-text-objects&gt;
+  &lt;/common&gt;
+  &lt;lefdef&gt;
+   &lt;read-all-layers&gt;true&lt;/read-all-layers&gt;
+   &lt;layer-map&gt;layer_map()&lt;/layer-map&gt;
+   &lt;dbu&gt;0.001&lt;/dbu&gt;
+   &lt;produce-net-names&gt;true&lt;/produce-net-names&gt;
+   &lt;net-property-name&gt;#1&lt;/net-property-name&gt;
+   &lt;produce-inst-names&gt;true&lt;/produce-inst-names&gt;
+   &lt;inst-property-name&gt;#1&lt;/inst-property-name&gt;
+   &lt;produce-pin-names&gt;false&lt;/produce-pin-names&gt;
+   &lt;pin-property-name&gt;#1&lt;/pin-property-name&gt;
+   &lt;produce-cell-outlines&gt;true&lt;/produce-cell-outlines&gt;
+   &lt;cell-outline-layer&gt;OUTLINE&lt;/cell-outline-layer&gt;
+   &lt;produce-placement-blockages&gt;true&lt;/produce-placement-blockages&gt;
+   &lt;placement-blockage-layer&gt;PLACEMENT_BLK&lt;/placement-blockage-layer&gt;
+   &lt;produce-regions&gt;true&lt;/produce-regions&gt;
+   &lt;region-layer&gt;REGIONS&lt;/region-layer&gt;
+   &lt;produce-via-geometry&gt;true&lt;/produce-via-geometry&gt;
+   &lt;special-via_geometry-suffix-string/&gt;
+   &lt;special-via_geometry-datatype-string&gt;0&lt;/special-via_geometry-datatype-string&gt;
+   &lt;produce-pins&gt;true&lt;/produce-pins&gt;
+   &lt;special-pins-suffix-string&gt;.PIN&lt;/special-pins-suffix-string&gt;
+   &lt;special-pins-datatype-string&gt;2&lt;/special-pins-datatype-string&gt;
+   &lt;produce-lef-pins&gt;true&lt;/produce-lef-pins&gt;
+   &lt;special-lef_pins-suffix-string&gt;.PIN&lt;/special-lef_pins-suffix-string&gt;
+   &lt;special-lef_pins-datatype-string&gt;2&lt;/special-lef_pins-datatype-string&gt;
+   &lt;produce-fills&gt;true&lt;/produce-fills&gt;
+   &lt;special-fills-suffix-string&gt;.FILL&lt;/special-fills-suffix-string&gt;
+   &lt;special-fills-datatype-string&gt;5&lt;/special-fills-datatype-string&gt;
+   &lt;produce-obstructions&gt;true&lt;/produce-obstructions&gt;
+   &lt;obstructions-suffix&gt;.OBS&lt;/obstructions-suffix&gt;
+   &lt;obstructions-datatype&gt;3&lt;/obstructions-datatype&gt;
+   &lt;produce-blockages&gt;true&lt;/produce-blockages&gt;
+   &lt;blockages-suffix&gt;.BLK&lt;/blockages-suffix&gt;
+   &lt;blockages-datatype&gt;4&lt;/blockages-datatype&gt;
+   &lt;produce-labels&gt;true&lt;/produce-labels&gt;
+   &lt;labels-suffix&gt;.LABEL&lt;/labels-suffix&gt;
+   &lt;labels-datatype&gt;1&lt;/labels-datatype&gt;
+   &lt;produce-lef-labels&gt;true&lt;/produce-lef-labels&gt;
+   &lt;lef-labels-suffix&gt;.LABEL&lt;/lef-labels-suffix&gt;
+   &lt;lef-labels-datatype&gt;1&lt;/lef-labels-datatype&gt;
+   &lt;produce-routing&gt;true&lt;/produce-routing&gt;
+   &lt;special-routing-suffix-string/&gt;
+   &lt;special-routing-datatype-string&gt;0&lt;/special-routing-datatype-string&gt;
+   &lt;produce-special-routing&gt;true&lt;/produce-special-routing&gt;
+   &lt;special-routing-suffix-string/&gt;
+   &lt;special-routing-datatype-string&gt;0&lt;/special-routing-datatype-string&gt;
+   &lt;via-cellname-prefix&gt;VIA_&lt;/via-cellname-prefix&gt;
+   &lt;read-lef-with-def&gt;true&lt;/read-lef-with-def&gt;
+   &lt;macro-resolution-mode&gt;default&lt;/macro-resolution-mode&gt;
+   &lt;separate-groups&gt;false&lt;/separate-groups&gt;
+   &lt;map-file/&gt;
+  &lt;/lefdef&gt;
+  &lt;mebes&gt;
+   &lt;invert&gt;false&lt;/invert&gt;
+   &lt;subresolution&gt;true&lt;/subresolution&gt;
+   &lt;produce-boundary&gt;true&lt;/produce-boundary&gt;
+   &lt;num-stripes-per-cell&gt;64&lt;/num-stripes-per-cell&gt;
+   &lt;num-shapes-per-cell&gt;0&lt;/num-shapes-per-cell&gt;
+   &lt;data-layer&gt;1&lt;/data-layer&gt;
+   &lt;data-datatype&gt;0&lt;/data-datatype&gt;
+   &lt;data-name&gt;DATA&lt;/data-name&gt;
+   &lt;boundary-layer&gt;0&lt;/boundary-layer&gt;
+   &lt;boundary-datatype&gt;0&lt;/boundary-datatype&gt;
+   &lt;boundary-name&gt;BORDER&lt;/boundary-name&gt;
+   &lt;layer-map&gt;layer_map()&lt;/layer-map&gt;
+   &lt;create-other-layers&gt;true&lt;/create-other-layers&gt;
+  &lt;/mebes&gt;
+  &lt;dxf&gt;
+   &lt;dbu&gt;0.001&lt;/dbu&gt;
+   &lt;unit&gt;1&lt;/unit&gt;
+   &lt;text-scaling&gt;100&lt;/text-scaling&gt;
+   &lt;circle-points&gt;100&lt;/circle-points&gt;
+   &lt;circle-accuracy&gt;0&lt;/circle-accuracy&gt;
+   &lt;contour-accuracy&gt;0&lt;/contour-accuracy&gt;
+   &lt;polyline-mode&gt;0&lt;/polyline-mode&gt;
+   &lt;render-texts-as-polygons&gt;false&lt;/render-texts-as-polygons&gt;
+   &lt;keep-other-cells&gt;false&lt;/keep-other-cells&gt;
+   &lt;keep-layer-names&gt;false&lt;/keep-layer-names&gt;
+   &lt;create-other-layers&gt;true&lt;/create-other-layers&gt;
+   &lt;layer-map&gt;layer_map()&lt;/layer-map&gt;
+  &lt;/dxf&gt;
+  &lt;cif&gt;
+   &lt;wire-mode&gt;0&lt;/wire-mode&gt;
+   &lt;dbu&gt;0.001&lt;/dbu&gt;
+   &lt;layer-map&gt;layer_map()&lt;/layer-map&gt;
+   &lt;create-other-layers&gt;true&lt;/create-other-layers&gt;
+   &lt;keep-layer-names&gt;false&lt;/keep-layer-names&gt;
+  &lt;/cif&gt;
+  &lt;mag&gt;
+   &lt;lambda&gt;1&lt;/lambda&gt;
+   &lt;dbu&gt;0.001&lt;/dbu&gt;
+   &lt;layer-map&gt;layer_map()&lt;/layer-map&gt;
+   &lt;create-other-layers&gt;true&lt;/create-other-layers&gt;
+   &lt;keep-layer-names&gt;false&lt;/keep-layer-names&gt;
+   &lt;merge&gt;true&lt;/merge&gt;
+   &lt;lib-paths&gt;
+   &lt;/lib-paths&gt;
+  &lt;/mag&gt;
+ &lt;/options&gt;
+&lt;/stream-import-data&gt;
+</stream-import-spec2>
  <synchronized-views>false</synchronized-views>
  <tech-editor-window-state/>
  <technology-data>&lt;?xml version="1.0" encoding="utf-8"?&gt;
@@ -450,8 +578,8 @@
  <tip-window-hidden>only-top-level-shown-by-default=3,macro-editor-basic-tips=4,macro-editor-basic-tips=0</tip-window-hidden>
  <tracking-cursor-color>auto</tracking-cursor-color>
  <tracking-cursor-enabled>true</tracking-cursor-enabled>
- <window-geometry>AdnQywADAAD/////////+AAAB4AAAAQQAAACMAAAANwAAAVPAAADMwAAAAACAAAAB4AAAAAAAAAAFwAAB38AAAQP</window-geometry>
- <window-state>AAAA/wAAAAD9AAAAAgAAAAAAAAFoAAADnfwCAAAABPsAAAAqAG4AYQB2AGkAZwBhAHQAbwByAF8AZABvAGMAawBfAHcAaQBkAGcAZQB0AAAAAAD/////AAAAjQD////7AAAAHABoAHAAXwBkAG8AYwBrAF8AdwBpAGQAZwBlAHQBAAAASAAAAVsAAAAWAP////sAAAAgAGwAaQBiAHMAXwBkAG8AYwBrAF8AdwBpAGQAZwBlAHQBAAABpwAAAj4AAAAWAP////sAAAAcAGUAbwBfAGQAbwBjAGsAXwB3AGkAZABnAGUAdAAAAAKXAAABTgAAAJYA////AAAAAQAAAJQAAAOd/AIAAAAD+wAAACoAYgBvAG8AawBtAGEAcgBrAHMAXwBkAG8AYwBrAF8AdwBpAGQAZwBlAHQAAAAAAP////8AAAAWAP////sAAAAcAGwAcABfAGQAbwBjAGsAXwB3AGkAZABnAGUAdAEAAABIAAADKQAAABYA////+wAAABwAbAB0AF8AZABvAGMAawBfAHcAaQBkAGcAZQB0AQAAA3UAAABwAAAAcAAAAHAAAAV8AAADnQAAAAQAAAAEAAAACAAAAAj8AAAAAQAAAAIAAAABAAAADgB0AG8AbwBsAGIAYQByAQAAAAD/////AAAAAAAAAAA=</window-state>
+ <window-geometry>AdnQywADAAD/////////9QAADwAAAAg0AAADYAAAABQAAArdAAAIGAAAAAACAAAADwAAAAAAAAAAIgAADv8AAAgz</window-geometry>
+ <window-state>AAAA/wAAAAD9AAAAAgAAAAAAAAKBAAAHkPwCAAAABPsAAAAqAG4AYQB2AGkAZwBhAHQAbwByAF8AZABvAGMAawBfAHcAaQBkAGcAZQB0AAAAAAD/////AAAAnAD////7AAAAHABoAHAAXwBkAG8AYwBrAF8AdwBpAGQAZwBlAHQBAAAAZAAAAiMAAAAfAP////sAAAAcAGUAbwBfAGQAbwBjAGsAXwB3AGkAZABnAGUAdAAAAAJ6AAAAlgAAAJYA////+wAAACAAbABpAGIAcwBfAGQAbwBjAGsAXwB3AGkAZABnAGUAdAEAAAKNAAAFZwAAAB8A////AAAAAQAAAX8AAAeQ/AIAAAAD+wAAACoAYgBvAG8AawBtAGEAcgBrAHMAXwBkAG8AYwBrAF8AdwBpAGQAZwBlAHQAAAAAAP////8AAAAfAP////sAAAAcAGwAcABfAGQAbwBjAGsAXwB3AGkAZABnAGUAdAEAAABkAAAG7QAAAB8A////+wAAABwAbAB0AF8AZABvAGMAawBfAHcAaQBkAGcAZQB0AQAAB1cAAACdAAAAnQAAAJ0AAAr0AAAHkAAAAAQAAAAEAAAACAAAAAj8AAAAAQAAAAIAAAABAAAADgB0AG8AbwBsAGIAYQByAQAAAAD/////AAAAAAAAAAA=</window-state>
  <xor-anotb>false</xor-anotb>
  <xor-axorb>true</xor-axorb>
  <xor-bnota>false</xor-bnota>

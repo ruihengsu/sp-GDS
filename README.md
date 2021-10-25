@@ -1,6 +1,12 @@
 # Ray's Design Library
 
+## What will you find?
+1. A KLayout `p-cell` library - written in Python - of photolithography utilities
+2. PCB Board Design Files
+3. Devices Layout
+4. Layouts used for past fabrication runs
 
+## Naming Convention
 All the files the library follows a specific naming convention consisting of 5 descriptors separated by a single underscore.
 
 |# |Descriptor   | Example   |

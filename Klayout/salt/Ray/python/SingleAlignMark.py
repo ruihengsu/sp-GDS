@@ -34,8 +34,8 @@ class SingleAlignMark(pya.PCellDeclarationHelper):
         l0 = pya.Region()
         l0.insert(square)
 
-        c1 = pya.DPoint(-self.cwidth/2, 0)
-        c2 = pya.DPoint(self.cwidth/2, 0)
+        c1 = pya.DPoint(-self.cwidth/2, 0)*scaling_factor
+        c2 = pya.DPoint(self.cwidth/2, 0)*scaling_factor
         p1 = pya.DPath([c1, c2], self.cthick)
 
         l1 = pya.Region()
