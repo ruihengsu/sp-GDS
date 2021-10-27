@@ -29,7 +29,7 @@ Every project in the library is given a 2 to 4 alphabet code.
 | Filename | Description | Preview |
 |---|---| --- |
 | `RS_2DEG_Hallbar+OhmicsTest_6x6_101821`  | Four hall bar mesas + ohmic contacts. In addition to the hall bars, there are also plenty of free ohmic contacts that can be used for testing. |  |
-
+| `RS_2DEG_OhmicsTest_6x6_102621.GDS` | 140 um ohmic contacts with 140 um spacing, spammed onto 6 mm by 6 mm chip | |
 
 ## RC
 
