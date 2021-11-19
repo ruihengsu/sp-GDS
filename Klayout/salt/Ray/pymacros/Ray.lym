@@ -49,6 +49,9 @@ from Serpentine import Serpentine
 
 from BoundingBox import BoundingBox
 
+from DotGuide import DotGuide
+from InnerLeads import InnerLeads
+
 class Ray(pya.Library):
     """
     The library where we will put the PCell into 
@@ -89,6 +92,10 @@ class Ray(pya.Library):
         self.layout().register_pcell("EtchTest_Circ2", EtchTest_Circ2())
         self.layout().register_pcell("EtchTest_Circ3", EtchTest_Circ3())
 
+        self.layout().register_pcell("DotGuide", DotGuide())
+        self.layout().register_pcell("InnerLeads", InnerLeads())
+        
+        
         # Register us with the name "SerpentineLib".
         self.register("Ray")
 

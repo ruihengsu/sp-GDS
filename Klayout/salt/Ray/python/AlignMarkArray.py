@@ -1,6 +1,7 @@
 import pya
 import numpy as np
 
+
 class AlignMarkArray(pya.PCellDeclarationHelper):
     """
     The PCell declaration for the AlignMarkArray
@@ -13,9 +14,10 @@ class AlignMarkArray(pya.PCellDeclarationHelper):
 
         # declare the parameters
         self.param("l", self.TypeLayer, "Layer", default=pya.LayerInfo(1, 0))
-    
+
         self.param("width", self.TypeDouble, "Rectangle width", default=300.0)
-        self.param("length", self.TypeDouble, "Rectangle length", default=300.0)
+        self.param("length", self.TypeDouble,
+                   "Rectangle length", default=300.0)
 
         self.param("cwidth", self.TypeDouble, "Cross width", default=200.0)
         self.param("clength", self.TypeDouble, "Cross length", default=200.0)
@@ -58,10 +60,12 @@ class AlignMarkArray(pya.PCellDeclarationHelper):
             c_x = float(p[0])
             c_y = float(p[1])
 
-            lower_left = pya.DPoint(c_x-self.width/2, c_y-self.length/2)*scaling_factor
-            upper_right = pya.DPoint(c_x+self.width/2, c_y+self.length/2)*scaling_factor
+            lower_left = pya.DPoint(
+                c_x-self.width/2, c_y-self.length/2)*scaling_factor
+            upper_right = pya.DPoint(
+                c_x+self.width/2, c_y+self.length/2)*scaling_factor
             square = pya.DBox(lower_left,
-                                       upper_right)
+                              upper_right)
 
             l0 = pya.Region()
             l0.insert(square)
@@ -80,9 +84,9 @@ class AlignMarkArray(pya.PCellDeclarationHelper):
             l2 = pya.Region()
             l2.insert(p2)
 
-            label = pya.TextGenerator.default_generator().text("{},{}".format(int(p[0]-x.max()/2), 
-                                                                              int(p[1]-y.max()/2)), 
-                                                               self.text_scale*self.layout.dbu).move(1000*(c_x-self.width/2 + self.width/40), 
+            label = pya.TextGenerator.default_generator().text("{},{}".format(int(p[0]-x.max()/2),
+                                                                              int(p[1]-y.max()/2)),
+                                                               self.text_scale*self.layout.dbu).move(1000*(c_x-self.width/2 + self.width/40),
                                                                                                      1000*c_y - 1000*self.text_distance)
 
             result = l0 - l1 - l2 - label
