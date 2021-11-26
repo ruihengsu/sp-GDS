@@ -53,12 +53,12 @@ layout = pya.Layout()
 si = layout.create_cell("si")
 l = layout.layer(1, 0)
 
-l_inner = 30
-l_outer = 7
-thick = 2
-pitch = thick + 1
-n = 35
-theta = 89
+l_inner = 40
+l_outer = 10
+thick = 5
+pitch = thick + 5
+n = 9
+theta = 80
 res = 4
 
 cs1 = CircularSerpentine(l_inner=l_inner,
