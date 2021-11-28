@@ -1,5 +1,9 @@
 import pya
+
+import re
 import numpy as np
+from load_yaml import *
+from pathlib import Path 
 
 def CircularSerpentine(l_inner: float, l_outer: float, thick: float, pitch: float, n: int, theta: float, res=3, rot=0) -> pya.DPath:
     print(f"{l_inner + l_outer + (n+1)*pitch} um")
@@ -76,13 +80,6 @@ scaling_factor = int(1/layout.dbu)
 si = layout.create_cell("si")
 l = layout.layer(1, 0)
 
-l_inner = 40
-l_outer = 10
-thick = 5
-pitch = thick + 5
-n = 9
-theta = 80
-res = 4
 
 cs1 = CircularSerpentine(l_inner=l_inner,
                          l_outer=l_outer,
@@ -121,9 +118,8 @@ cs4 = CircularSerpentine(l_inner=l_inner,
                          rot=270)
 
 ped = Circle(l_inner - 10)
-
 inner_r = l_inner + l_outer + (n+1)*pitch
-ring = Donut(inner_r, inner_r + 20, scaling_factor)
+ring = Donut(inner_r, outer_r, scaling_factor)
 
 si.shapes(l).insert(cs1)
 si.shapes(l).insert(cs2)
@@ -132,4 +128,18 @@ si.shapes(l).insert(cs4)
 si.shapes(l).insert(ped)
 si.shapes(l).insert(ring)
 
-layout.write("./great.gds")
+gds_dir = Path("layouts")
+
+i = 0 
+for gds in gds_dir.glob("*.gds"):
+    existing_i = int(re.findall(r'[0-9]+', gds.name))
+    if existing_i >= i:
+        i += 1
+
+gds_path = gds_dir/Path("disk{}.gds".format(i))
+yml_path = gds_dir/Path("disk{}.yml".format(i))
+
+layout.write(str(gds_path))
+
+with open(yml_path, "w") as out: 
+    yaml.dump(p, out, default_flow_style=False)
