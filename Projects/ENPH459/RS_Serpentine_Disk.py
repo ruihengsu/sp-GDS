@@ -1,6 +1,5 @@
-import numpy as np
 import pya
-
+import numpy as np
 
 def CircularSerpentine(l_inner: float, l_outer: float, thick: float, pitch: float, n: int, theta: float, res=3, rot=0) -> pya.DPath:
     print(f"{l_inner + l_outer + (n+1)*pitch} um")
@@ -50,17 +49,30 @@ def CircularSerpentine(l_inner: float, l_outer: float, thick: float, pitch: floa
     return tt*pya.DPath(pts, thick)
 
 
-def Circle(inner_r: float, outer_r: float,) -> pya.DPolygon:
+def Circle(radius: float,) -> pya.DPolygon:
 
     pts = list()
-    pts += [pya.DPoint(outer_r*np.sin(theta), outer_r*np.cos(theta))
-            for theta in range(0, 360)]
-    # pts += [pya.DPoint(outer_r*np.sin(theta), outer_r*np.cos(theta)) for theta in range(0, 360)]
+    pts += [pya.DPoint(radius*np.sin(theta), radius*np.cos(theta))
+            for theta in np.linspace(0, 2*np.pi, 360)]
 
     return pya.DPolygon(pts)
 
 
+def Donut(inner_r: float, outer_r: float, scaling_factor: float) -> pya.DPolygon:
+    inner_circle = Circle(inner_r*scaling_factor)
+    outer_circle = Circle(outer_r*scaling_factor)
+
+    R0 = pya.Region()
+    R1 = pya.Region()
+    R0.insert(outer_circle)
+    R1.insert(inner_circle)
+
+    return R0 - R1
+
+
 layout = pya.Layout()
+scaling_factor = int(1/layout.dbu)
+
 si = layout.create_cell("si")
 l = layout.layer(1, 0)
 
@@ -108,8 +120,16 @@ cs4 = CircularSerpentine(l_inner=l_inner,
                          res=res,
                          rot=270)
 
+ped = Circle(l_inner - 10)
+
+inner_r = l_inner + l_outer + (n+1)*pitch
+ring = Donut(inner_r, inner_r + 20, scaling_factor)
+
 si.shapes(l).insert(cs1)
 si.shapes(l).insert(cs2)
 si.shapes(l).insert(cs3)
 si.shapes(l).insert(cs4)
+si.shapes(l).insert(ped)
+si.shapes(l).insert(ring)
+
 layout.write("./great.gds")
