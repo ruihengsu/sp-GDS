@@ -1,0 +1,12 @@
+l_inner: 40
+l_outer: 10
+w_meander: 70
+thick: 5
+pitch: 10
+n: 8
+outer_r: 200
+thetas:
+  - 0
+  - 90
+  - 180
+  - 270
