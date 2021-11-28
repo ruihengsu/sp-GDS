@@ -1,6 +1,7 @@
 import numpy as np
 import pya
 
+
 def CircularSerpentine(l_inner: float, l_outer: float, thick: float, pitch: float, n: int, theta: float, res=3, rot=0) -> pya.DPath:
     print(f"{l_inner + l_outer + (n+1)*pitch} um")
 
@@ -47,6 +48,16 @@ def CircularSerpentine(l_inner: float, l_outer: float, thick: float, pitch: floa
 
     tt = pya.DCplxTrans(1,  rot, False, 0, 0)
     return tt*pya.DPath(pts, thick)
+
+
+def Circle(inner_r: float, outer_r: float,) -> pya.DPolygon:
+
+    pts = list()
+    pts += [pya.DPoint(outer_r*np.sin(theta), outer_r*np.cos(theta))
+            for theta in range(0, 360)]
+    # pts += [pya.DPoint(outer_r*np.sin(theta), outer_r*np.cos(theta)) for theta in range(0, 360)]
+
+    return pya.DPolygon(pts)
 
 
 layout = pya.Layout()
