@@ -132,12 +132,13 @@ gds_dir = Path("layouts")
 
 i = 0 
 for gds in gds_dir.glob("*.gds"):
-    existing_i = int(re.findall(r'[0-9]+', gds.name))
+    existing_i = int(re.findall(r'[0-9]+', gds.name)[0])
     if existing_i >= i:
         i += 1
 
-gds_path = gds_dir/Path("disk{}.gds".format(i))
-yml_path = gds_dir/Path("disk{}.yml".format(i))
+# csdisk means curved serpentine
+gds_path = gds_dir/Path("csdisk{}.gds".format(i))
+yml_path = gds_dir/Path("csdisk{}.yml".format(i))
 
 layout.write(str(gds_path))
 
