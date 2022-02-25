@@ -18,7 +18,7 @@ class LabelArray_VariablePitch(pya.PCellDeclarationHelper):
         self.param("labels", self.TypeList,
                    "List of labels", default=["1", "2", "3"])           
         self.param("text_pitch", self.TypeList,
-                   "Distance between adjacent Labels", default = np.array([0, 50, 100], dtype=int).tolist())
+                   "Distance between adjacent Labels", default = np.array([0, 50, 100], ).tolist())
         self.param("text_scale", self.TypeDouble,
                    "Text scaling factor", default=10)
 

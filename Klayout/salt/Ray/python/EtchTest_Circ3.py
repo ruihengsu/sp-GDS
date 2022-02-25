@@ -14,7 +14,7 @@ class EtchTest_Circ3(pya.PCellDeclarationHelper):
         # declare the parameters
         self.param("l", self.TypeLayer, "Layer", default=pya.LayerInfo(1, 0))
         self.param("RL", self.TypeList, "Radius list", default=(
-            np.linspace(1000, 1, 101, dtype=int)).tolist())
+            np.linspace(1000, 1, 101, )).tolist())
         self.param("S", self.TypeDouble,
                    "Spacing List", default=50)
         self.param("res", self.TypeInt,

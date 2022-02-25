@@ -43,7 +43,7 @@ class AlignMarkArray(pya.PCellDeclarationHelper):
         scaling_factor = int(1/self.layout.dbu)
         print(scaling_factor)
         x = np.linspace(0, self.rows, endpoint=False,
-                        num=self.rows, dtype=int)*self.row_step
+                        num=self.rows, )*self.row_step
         y = np.linspace(0, self.columns, endpoint=False,
                         num=self.columns,)*self.col_step
 

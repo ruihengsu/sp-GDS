@@ -35,7 +35,7 @@ class RCLineArray(pya.PCellDeclarationHelper):
     def produce_impl(self):
         
         x = np.linspace(0, self.rows, endpoint=False,
-                        num=self.rows, dtype=int)*self.row_step
+                        num=self.rows, )*self.row_step
         y = np.linspace(0, self.columns, endpoint=False,
                         num=self.columns,)*self.col_step
 

@@ -15,7 +15,7 @@ class EtchTest_Box3(pya.PCellDeclarationHelper):
         self.param("l", self.TypeLayer, "Layer", default=pya.LayerInfo(1, 0))
         self.param("L", self.TypeDouble, "Length", default=1000)
         self.param("WL", self.TypeList, "Width List", default=(
-            np.linspace(1000, 1, 101, dtype=int)).tolist())
+            np.linspace(1000, 1, 101, )).tolist())
         self.param("text_distance", self.TypeDouble,
                    "Distance between the structure and the bottom of the text", default=10.)
         self.param("spacing", self.TypeDouble,
@@ -24,7 +24,7 @@ class EtchTest_Box3(pya.PCellDeclarationHelper):
                    "Actual width is equal to what is specified, times this scaling parameter", default=1/1000.)
         self.param("labelscaling", self.TypeDouble,
                    "Changes units of labels", default=1000)
-        # print((np.linspace(1000, 1, 11, dtype=int)).tolist())
+        # print((np.linspace(1000, 1, 11, )).tolist())
 
     def display_text_impl(self):
         # Provide a descriptive text for the cell
