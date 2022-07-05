@@ -1,0 +1,17 @@
+MAGAZIN 'MATRIX'
+
+#1
+%3A
+JDF 'matrix',1
+GLMDET C
+CHMDET A,1,999
+CHIPAL V1
+OFFSET (15000, -15000)
+
+
+END
+
+; visual-Job Revision Number 5.8.0. (0), Jul  4 2019
+; Created Sat Sep 21 12:55:39 2019
+
+

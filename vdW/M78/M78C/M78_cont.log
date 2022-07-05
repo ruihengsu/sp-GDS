@@ -1,0 +1,307 @@
+  ----------------------------------------------------------------------------
+  
+  Layout ENGINE x64 Revision Number 6.01.001 , Mar 18 2021
+  BEAMER Revision Number 6.1.1 (44764), Mar 18 2021
+  Linux - 4.15.0-135-generic
+     Session started on Thu Apr 22 11:48:46 2021
+  
+     8 processors, 64315 MB memory
+     TempFile Behaviour: Default
+  
+  Read GDSII started on Thu Apr 22 11:48:46 2021
+  
+     Read GDSII input file: /home/manab10/Documents/Manab Drawings/May2021/M78/M78C/M78_cont.gds
+     Input file last modified: [2021-04-22 11:25:36] 
+     Polygon Validation: on
+     Curve detection: off
+     Number of Threads: 4
+     File Size (MB): 0.0165195
+  
+     units (user):   0.001
+     units (meters): 1e-09
+  
+     GDS file created:  [3921-4-22 11:25:36]
+  
+     number of structures: 1
+     number of boundaries: 234
+     number of paths:      0
+     number of srefs:      0
+     number of arefs:      0
+     number of texts:      0
+     number of nodes:      0
+     number of boxes:      0
+     number of zigzags:    0
+  
+     Number of main structures: 1
+     Layer Set           : 1(0), 3(0), 1(1), 4(0), 10(0), 15(0), 16(0)
+  
+     Geometry Count: 234 definitions with 1216 vertices, 234 instances
+     Cell Count: 1 definitions, 1 instances in 1 references/arrays
+  
+     Geometry Compaction Factor: 1.0
+     Cell Compaction Factor: 1.0
+     Hierarchy Compaction Factor: 1.0
+  
+     Hierarchy Tree Depth: 1
+  
+     Area (in um2): 9.3319068880e+05
+     Bbox (in um) : (-1500, -1500), (1500, 1500)
+     Coverage : 10.4 %
+  
+     Extent (in um) : (-1500, -1500), (1500, 1500)
+     Extent related Cov. : 10.4 %
+  
+     CPU time: 0.1 seconds, Elapsed time: 1.0 seconds
+     Memory usage: 72.004 MB additional, 237.926 MB total
+  
+  Read GDSII completed on Thu Apr 22 11:48:47 2021
+  ----------------------------------------------------------------------------
+  
+  Extract started on Thu Apr 22 11:48:49 2021
+  
+     Extract cell instances: 
+     Layers(s): 15(0), 16(0)
+     Maintain extent
+     Maintain extent
+  
+     Number of main structures: 1
+     Layer Set           : 15(0), 16(0)
+  
+     Geometry Count: 51 definitions with 312 vertices, 51 instances
+     Cell Count: 1 definitions, 1 instances in 1 references/arrays
+  
+     Geometry Compaction Factor: 1.0
+     Cell Compaction Factor: 1.0
+     Hierarchy Compaction Factor: 1.0
+  
+     Hierarchy Tree Depth: 1
+  
+     Area (in um2): 7.8536974136e+05
+     Bbox (in um) : (-841.695, -723.993), (858.622, 813.587)
+     Coverage : 30 %
+  
+     Extent (in um) : (-1500, -1500), (1500, 1500)
+     Extent related Cov. : 8.73 %
+  
+     CPU time: 0.0 seconds, Elapsed time: 0.0 seconds
+     Memory usage: 0.000 B additional, 229.922 MB total
+  
+  Extract completed on Thu Apr 22 11:48:49 2021
+  ----------------------------------------------------------------------------
+  
+  Healing started on Thu Apr 22 11:48:51 2021
+  
+  
+     Softframe: 0.300 um
+     Processing Mode: Healing
+
+     Hierarchic Processing
+     Target Layer Assignment: PerLayer
+     Target Layer/Datatype: 1(0)
+     Selected Layer Set: 15(0)
+  
+     Operation Executed with 4 Threads
+  
+     Number of main structures: 1
+     Layer Set           : 15(0), 16(0)
+  
+     Geometry Count: 28 definitions with 319 vertices, 28 instances
+     Cell Count: 1 definitions, 1 instances in 1 references/arrays
+  
+     Geometry Compaction Factor: 1.0
+     Cell Compaction Factor: 1.0
+     Hierarchy Compaction Factor: 1.0
+  
+     Hierarchy Tree Depth: 1
+  
+     Area (in um2): 7.4204086512e+05
+     Bbox (in um) : (-841.695, -723.993), (858.622, 813.587)
+     Coverage : 28.4 %
+  
+     Extent (in um) : (-1500, -1500), (1500, 1500)
+     Extent related Cov. : 8.24 %
+  
+     CPU time: 0.0 seconds, Elapsed time: 0.0 seconds
+     Memory usage: 8.004 MB additional, 237.926 MB total
+  
+  Healing completed on Thu Apr 22 11:48:51 2021
+  ----------------------------------------------------------------------------
+  
+  Biasing started on Thu Apr 22 11:48:51 2021
+  
+  
+     Biasing of -0.0000000000 um
+     Corner Extension: 1.000
+     X-Y Biasing
+     Hierarchic Processing
+     Bias without Healing: False 
+     Target Layer Assignment: PerLayer
+     Target Layer/Datatype: 0(0)
+     Selected Layer Set: 15(0)
+  
+     Operation Executed with 4 Threads
+  
+     Number of main structures: 1
+     Layer Set           : 15(0), 16(0)
+  
+     Geometry Count: 28 definitions with 319 vertices, 28 instances
+     Cell Count: 1 definitions, 1 instances in 1 references/arrays
+  
+     Geometry Compaction Factor: 1.0
+     Cell Compaction Factor: 1.0
+     Hierarchy Compaction Factor: 1.0
+  
+     Hierarchy Tree Depth: 1
+  
+     Area (in um2): 7.4204086512e+05
+     Bbox (in um) : (-841.695, -723.993), (858.622, 813.587)
+     Coverage : 28.4 %
+  
+     Extent (in um) : (-1500, -1500), (1500, 1500)
+     Extent related Cov. : 8.24 %
+  
+     CPU time: 0.0 seconds, Elapsed time: 0.0 seconds
+     Memory usage: 8.004 MB additional, 237.926 MB total
+  
+  Biasing completed on Thu Apr 22 11:48:51 2021
+  ----------------------------------------------------------------------------
+  
+  Proximity Effect Correction started on Thu Apr 22 11:49:08 2021
+  
+     Type: PEC
+  
+     Short Range Correction OFF
+     Use Numerical PSF: /home/manab10/Documents/From Beamer/Si_SiO2_300nm_PMMA_330nm_100kV.lpsf
+     Beam Blur / Size  = 0.000000 um
+     Separation Value  = 0.252167 um
+     Mid Range Activation Threshold  = 2.00 %
+     Mid Range Energy detected with current settings  = 3.87 %
+     Separate Mid Range PEC on  -> ( applied resolution =  0.410 um )
+     Hierarchic Short Range Correction  on
+     Hierarchic Long Range Correction  off
+     Isodose Grid = 0.005000 um
+     Nr Doseclasses = 256
+     Manhattan Fracturing switched on
+     LR Minimum Feature Size  = 0.225000 um
+     Periodic Layout Repetition switched off
+     Layer for Correction = 0(0)
+  Warning:    None of the selected PEC layers is available;  No PEC will be applied. 
+     Layer for Long Range Fracturing = *
+  Warning:    Layer for Long Range Fracturing = 15(0)  rejected as not contained in the PEC layer list.
+  Warning:    Layer for Long Range Fracturing = 16(0)  rejected as not contained in the PEC layer list.
+  Warning:    Note that no fractures will be added during LR dose assignment. 
+  
+  Equivalent Beta[um]: 19.055, Equivalent Eta : 0.499
+  Min. layout independent LR dose factor = 0.750
+  Number Doseclasses: 1
+  
+  Dosetable:
+      0: 1
+   
+     Dose Accuracy: 0.0 %
+
+  
+     Number of main structures: 1
+     Layer Set           : 15(0), 16(0)
+  
+     Geometry Count: 28 definitions with 319 vertices, 28 instances
+     Cell Count: 1 definitions, 1 instances in 1 references/arrays
+  
+     Geometry Compaction Factor: 1.0
+     Cell Compaction Factor: 1.0
+     Hierarchy Compaction Factor: 1.0
+  
+     Hierarchy Tree Depth: 1
+  
+     Area (in um2): 7.4204086512e+05
+     Bbox (in um) : (-841.695, -723.993), (858.622, 813.587)
+     Coverage : 28.4 %
+  
+     Extent (in um) : (-1500, -1500), (1500, 1500)
+     Extent related Cov. : 8.24 %
+  
+     CPU time: 0.7 seconds, Elapsed time: 1.0 seconds
+     Memory usage: 8.004 MB additional, 229.922 MB total
+  
+  Proximity Effect Correction completed on Thu Apr 22 11:49:09 2021
+  ----------------------------------------------------------------------------
+  
+  Format JEOL52 started on Thu Apr 22 11:49:33 2021
+  
+     Export started on Thu Apr 22 11:49:33
+     Pattern Filename: /home/manab10/Documents/Manab Drawings/May2021/M78/M78C/m78c.v30
+  
+     Machine Type: JBX-8100FS
+     Unit of Chip Size [um]: 0.000500
+     Unit of Pattern Data [um]: 0.000500
+     Unit of Position Set [um]: 0.000500
+     Shot Pitch: 10
+     Shot Pitch [um]: 0.005000
+     Field Size (x/y)[um]: 1000.000000/1000.000000
+     Field Overlap (x/y)[um]: 0.000000/0.000000
+     Job Frame Lower Left (x/y)[um]: -1500.000000/-1500.000000
+     Job Frame Upper Right (x/y)[um]: 1500.000000/1500.000000
+     Position Set Area Size [um]: 1000.000000
+     Normalize Dose: False
+     Feature Ordering: ArrayCompaction
+     Subfield Optimization Layer: *
+     Center To Field: True
+     Field Memory Size (MB): 256
+     Single Line Shot Ranks: 1
+     Dose Mapping: Relative
+     Shot Time Modulation Table Name: MOD001
+     Fracture Mode: LRFT
+     Curve Tolerance Factor [Res]: 1.000000
+     Symmetric Fracturing: False
+     Traversal Mode: Fixed
+     Floating Subfield Fracturing: False
+     Floating Subfield Size [um]: 2.047
+     Fixed Field Traversal Type: MeanderX
+     Field Overlap X [um] = 0.000000
+   Field Overlap Y [um] = 0.000000
+   Overlap Method = Share between Fields
+   Interleaving Size [um] = 0.000000
+   Interlock Layer = *
+   Multipass Mode = Single Pass
+   Multipass Field Arrangement = Shortest Path
+   Mainfield Offset X [-] = 0.500000
+   Mainfield Offset Y [-] = 0.500000
+   Mainfield Offset Absolute [-] = 0
+   Subfield Offset X [-] = 0.500000
+   Subfield Offset Y [-] = 0.500000
+   Subfield Offset Absolute [-] = 0
+   Layer for Multipass = *
+   Userdefined Dosepasses = 
+
+  
+     Fracturing Executed with 4 Threads 
+     Number of Fields 6
+     Number of decompacted Rectangles 22
+     Number of decompacted Trapezoids 345
+     Number of decompacted SingleLines 0
+     Total number of decompacted Features 367
+     Number of main structures: 1
+     Layer Set           : 15(0), 16(0)
+  
+     Geometry Count: 28 definitions with 319 vertices, 28 instances
+     Cell Count: 1 definitions, 1 instances in 1 references/arrays
+  
+     Geometry Compaction Factor: 1.0
+     Cell Compaction Factor: 1.0
+     Hierarchy Compaction Factor: 1.0
+  
+     Hierarchy Tree Depth: 1
+  
+     Area (in um2): 7.4204086512e+05
+     Bbox (in um) : (-841.695, -723.993), (858.622, 813.587)
+     Coverage : 28.4 %
+  
+     Extent (in um) : (-1500, -1500), (1500, 1500)
+     Extent related Cov. : 8.24 %
+  
+     CPU time: 0.1 seconds, Elapsed time: 0.0 seconds
+     Memory usage: 8.004 MB additional, 229.922 MB total
+  
+  Format JEOL52 completed on Thu Apr 22 11:49:33 2021
+  ----------------------------------------------------------------------------
+  

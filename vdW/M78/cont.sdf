@@ -1,0 +1,18 @@
+MAGAZIN 'CONT'
+
+#1
+%3A
+JDF 'cont',1
+GLMDET S
+CHMDET A,1,999
+CHIPAL 4
+HSWITCH OFF, ON
+OFFSET (1500, -1500)
+
+
+END
+
+; visual-Job Revision Number 6.1.1. (44764), Mar 18 2021
+; Created Wed Apr 21 11:13:01 2021
+
+

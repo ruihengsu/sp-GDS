@@ -1,0 +1,158 @@
+  ----------------------------------------------------------------------------
+  
+  Layout ENGINE Linux-x86_64-Ubuntu.18.04/M64 Revision Number 6.03.000 , Dec 17 2021
+  BEAMER Revision Number 6.3.0 (53409), Dec 17 2021
+  Linux - 4.15.0-173-generic
+     Session started on Wed May 04 09:57:39 2022
+  
+     8 processors, 64314.8 MB memory
+     TempFile Behaviour: Default
+  
+  Read GDSII started on Wed May 04 09:57:39 2022
+  
+     Read GDSII input file: /home/folklab/writes/Ray/050422/RS3/RS3_cont.gds
+     Input file last modified: [2022-05-04 16:33:12]
+     GDS Version: 6
+     Polygon Validation: on
+     Curve detection: off
+     Number of Threads: 4
+     File Size (MB): 0.0129299
+  
+     units (user):   0.001
+     units (meters): 1e-09
+  
+     GDS file created:  [3922-5-4 9:33:12]
+  
+  Warning: 0 top cells () found in input file - make sure to Extract the correct one(s) if not all of them are required
+     number of structures: 3
+     number of boundaries: 201
+     number of paths:      0
+     number of srefs:      0
+     number of arefs:      1
+     number of texts:      0
+     number of nodes:      0
+     number of boxes:      0
+     number of zigzags:    0
+  
+     Number of main structures: 2
+     Layer Set           : 20(0), 1(0), 1(1), 4(0), 6(0), 5(0)
+  
+     Geometry Count: 201 definitions with 859 vertices, 204 instances
+     Cell Count: 3 definitions, 6 instances in 3 references/arrays
+  
+     Geometry Compaction Factor: 1.0
+     Cell Compaction Factor: 2.0
+     Hierarchy Compaction Factor: 1.2
+  
+     Hierarchy Tree Depth: 2
+  
+     Area (in um2): 4.9266616131e+05
+     Bbox (in um) : (-4456.05, -1500), (1500, 1500)
+     Coverage : 2.76 %
+  
+     Extent (in um) : (-4456.05, -1500), (1500, 1500)
+     Extent related Cov. : 2.76 %
+  
+     CPU time: 0.15 seconds, Elapsed time: 1.15 seconds
+     Memory usage: 8.004 MB additional, 8.004 MB total
+  
+  Read GDSII completed on Wed May 04 09:57:40 2022
+  ----------------------------------------------------------------------------
+  
+  Extract ("Extract") started on Wed May 04 09:57:40 2022
+  
+     Extract cell instances: 
+     Layers(s): 10(0)
+     Maintain extent
+     Maintain extent
+  
+     Number of main structures: 0
+     Layer Set           : *
+  
+     Geometry Count: 0 definitions with 0 vertices, 0 instances
+     Cell Count: 0 definitions, 0 instances in 0 references/arrays
+  
+  
+     Hierarchy Tree Depth: 0
+  
+     Area (in um2): 0.0000000000e+00
+     Bbox is empty
+  
+     Extent (in um) : (-4456.05, -1500), (1500, 1500)
+  
+     CPU time: 0.01 seconds, Elapsed time: 0.02 seconds
+     Memory usage: 0.000 B additional, 8.004 MB total
+  
+  Extract ("Extract") completed on Wed May 04 09:57:40 2022
+  ----------------------------------------------------------------------------
+  
+  Extract ("Extract") started on Wed May 04 09:57:58 2022
+  
+     Extract cell instances: 
+     Layers(s): 20(0)
+     Maintain extent
+     Maintain extent
+  
+     Number of main structures: 2
+     Layer Set           : 20(0)
+  
+     Geometry Count: 28 definitions with 168 vertices, 31 instances
+     Cell Count: 3 definitions, 6 instances in 3 references/arrays
+  
+     Geometry Compaction Factor: 1.1
+     Cell Compaction Factor: 2.0
+     Hierarchy Compaction Factor: 1.2
+  
+     Hierarchy Tree Depth: 2
+  
+     Area (in um2): 3.7262892029e+05
+     Bbox (in um) : (-4456.05, -575), (575, 749.007)
+     Coverage : 5.59 %
+  
+     Extent (in um) : (-4456.05, -1500), (1500, 1500)
+     Extent related Cov. : 2.09 %
+  
+     CPU time: 0.01 seconds, Elapsed time: 0.03 seconds
+     Memory usage: 0.000 B additional, 1.684 MB total
+  
+  Extract ("Extract") completed on Wed May 04 09:57:58 2022
+  ----------------------------------------------------------------------------
+  
+  Healing ("Heal") started on Wed May 04 09:57:58 2022
+  
+  
+     Softframe: 0.300 um
+     Processing Mode: Healing
+
+     Hierarchic Processing
+     Target Layer Assignment: PerLayer
+     Target Layer/Datatype: 1(0)
+     Selected Layer Set: 20(0)
+  
+     Operation Executed with 4 Threads
+  
+     Number of main structures: 2
+     Layer Set           : 20(0)
+  
+     Geometry Count: 11 definitions with 143 vertices, 11 instances
+     Cell Count: 2 definitions, 2 instances in 2 references/arrays
+  
+     Geometry Compaction Factor: 1.0
+     Cell Compaction Factor: 1.0
+     Hierarchy Compaction Factor: 1.0
+  
+     Hierarchy Tree Depth: 1
+  
+     Area (in um2): 3.5415402407e+05
+     Bbox (in um) : (-4456.05, -575), (575, 749.007)
+     Coverage : 5.32 %
+  
+     Extent (in um) : (-4456.05, -1500), (1500, 1500)
+     Extent related Cov. : 1.98 %
+  
+     CPU time: 0.04 seconds, Elapsed time: 0.07 seconds
+     Memory usage: 8.004 MB additional, 9.688 MB total
+  
+  Healing ("Heal") completed on Wed May 04 09:57:58 2022
+  ----------------------------------------------------------------------------
+  
